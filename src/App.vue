@@ -4,7 +4,7 @@ import VNavBar from './components/VNavBar.vue'
 </script>
 
 <template>
-  <VNavBar></VNavBar>
+  <VNavBar/>
   <div id="main-container">
     <RouterView v-slot="{ Component }">
       <Transition name="slide" mode="out-in">
