@@ -5,7 +5,7 @@ import VNavBar from './components/VNavBar.vue'
 
 <template>
   <VNavBar/>
-  <div id="main-container">
+  <div>
     <RouterView v-slot="{ Component }">
       <Transition name="slide" mode="out-in">
         <component :is="Component"></component>
@@ -15,14 +15,6 @@ import VNavBar from './components/VNavBar.vue'
 </template>
 
 <style scoped>
-
-#main-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  min-height: 100vh;
-}
 
 .slide-enter-active, .slide-leave-active {
   transition: all 0.3s ease-in-out;

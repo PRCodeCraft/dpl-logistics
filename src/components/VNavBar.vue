@@ -32,8 +32,8 @@ export default {
   <div class="pr-background-navbar">
     <nav class="container px-6 py-1 mx-auto md:flex md:justify-around md:items-center">
       <div class="flex items-center justify-around">
-        <router-link to="/" class="text-xl font-bold text-gray-100 md:text-2xl pr-navbar-item"
-          ><img src="../assets/dpllogo.png" alt="dpl logo">
+        <router-link to="/" class="text-xl font-bold text-gray-100 md:text-2xl"
+          ><img src="../assets/dpllogo.png" alt="dpl logo" width="150" height="150" class="mt-3 mb-3">
         </router-link>
         <!-- Mobile menu button -->
         <div @click="toggleNav" class="flex md:hidden">
