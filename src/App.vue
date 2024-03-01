@@ -6,10 +6,12 @@ import VNavBar from './components/VNavBar.vue'
 <template>
   <VNavBar/>
   <div>
-    <RouterView v-slot="{ Component }">
-      <Transition name="slide" mode="out-in">
+    <!-- No funciona bien el transition -->
+    <!-- <Transition name="slide" mode="out-in">
         <component :is="Component"></component>
-      </Transition>
+      </Transition> -->
+    <RouterView v-slot="{ Component }">
+        <component :is="Component"></component>
     </RouterView>
   </div>
 </template>

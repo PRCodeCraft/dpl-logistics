@@ -1,9 +1,53 @@
 /* PR CODE CRAFT VARIABLES */
 :root {
+  --color-indigo-100: #1e2340;
+  --color-indigo-80: #484b62;
+  --color-indigo-60: #737484;
+  --color-indigo-40: #9e9da7;
+  --color-indigo-20: #c9c6c9;
+
   --color-white: #ffffff;
-  --color-light-blue-lighter: #bbd9ef;
+  --color-white-100: #c9c6c9;
+  --color-white-80: #f5f5f0;
+  --color-white-60: #f5f3ef;
+  --color-white-40: #f4f2ee;
+  --color-white-20: #f4f0ed;
+
   --color-light-blue: #7c9cb5;
-  --color-indigo: #1d2344;
+  --color-light-blue-lighter: #bbd9ef;
+  --color-light-blue-100: #a5b5c4;
+  --color-light-blue-80: #b4c0cc;
+  --color-light-blue-60: #c4ccd4;
+  --color-light-blue-40: #d4d7dc;
+  --color-light-blue-20: #e4e3e4;
+
+  --color-gray-100: #d9d8de;
+  --color-gray-80: #dedce0;
+  --color-gray-60: #e3e1e3;
+  --color-gray-40: #e9e5e6;
+  --color-gray-20: #eeeae9;
+
+  --color-blue-100: #3d4f6d;
+  --color-blue-80: #3d4f6d;
+  --color-blue-60: #616f86;
+  --color-blue-40: #aaafb9;
+  --color-blue-20: #aaafb9;
+
+
+ 
+ 
+}
+@font-face {
+  font-family: AkiraExpandedDemo;
+  src: url('../assets/fonts/AkiraExpandedDemo.otf') format('opentype');
+}
+@font-face {
+  font-family: Mundial;
+  src: url('../assets/fonts/Mundial.otf') format('opentype');
+}
+@font-face {
+  font-family: MundialLight;
+  src: url('../assets/fonts/MundialLight.otf') format('opentype');
 }
 
 /* color palette from <https://github.com/vuejs/theme> */
