@@ -29,7 +29,7 @@ export default {
 
 <template>
   <div class="pr-background-navbar">
-    <nav class="container px-6 py-1 mx-auto md:flex md:justify-between md:items-center px-12 mx-auto max-w-screen-xl">
+    <nav class="container py-1 mx-auto md:flex md:justify-between md:items-center px-12 mx-auto max-w-screen-xl">
       <div class="flex items-center justify-between">
         <router-link to="/" class="text-xl font-bold text-gray-100 md:text-2xl"
           ><img src="../assets/dpllogo.png" alt="dpl logo" width="100" height="100" class="mt-3 mb-3">
