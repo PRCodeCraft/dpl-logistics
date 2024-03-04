@@ -30,6 +30,7 @@
   background-image: url('../assets/hero_home.png');
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .pr-hero-block-font {
