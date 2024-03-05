@@ -20,21 +20,37 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
             ><span class="pr-vision-text"> & Vision</span>
           </div>
           <div class="pt-12">
-              <div class="flex pr-mission-check">
-                <font-awesome-icon :icon="faCheck" class="pr-check-one" />
-                We consistently deliver superior truckload services, exceeding client expectations
-                through reliability, efficiency, and a relentless commitment to excellence in every
-                aspect of our logistics solutions.
-              </div>
-              <div class="flex pr-vision-check pt-8">
-                <font-awesome-icon :icon="faCheck" class="pr-check-two" />
-                We aspire to be recognized as the premier symbol of excellence and reliability in
-                the trucking industry, committed to being your steadfast and trusted logistics
-                partner.
-              </div>
+            <div class="flex pr-mission-check">
+              <font-awesome-icon :icon="faCheck" class="pr-check-one" />
+              We consistently deliver superior truckload services, exceeding client expectations
+              through reliability, efficiency, and a relentless commitment to excellence in every
+              aspect of our logistics solutions.
+            </div>
+            <div class="flex pr-vision-check pt-8">
+              <font-awesome-icon :icon="faCheck" class="pr-check-two" />
+              We aspire to be recognized as the premier symbol of excellence and reliability in the
+              trucking industry, committed to being your steadfast and trusted logistics partner.
+            </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <!-- Freight - give us a call section  -->
+  <div class="pr-background-freight">
+    <div class="flex justify-end gap-x-14 pr-freight-direction">
+      <div class="pr-text-btn-freight">
+        <div class="pr-text-freight">
+          Do you have freight that requires
+          <span class="pr-middle-text-freight">prompt and reliable</span> transportation?
+        </div>
+        <router-link
+          to="/contact"
+          class="inline-flex items-center justify-center px-5 py-3 pr-btn-hero"
+          >Give us a call</router-link
+        >
+      </div>
+      <img src="../assets/lorryHome2.jpg" alt="lorry on the road" class="pr-image-freight-home" />
     </div>
   </div>
   <VMountain />
@@ -94,12 +110,55 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
   column-gap: 1rem;
 }
 
-@media(max-width: 1207px) {
+.pr-background-freight {
+  background: url('../assets/PatronDeMarca2.jpg');
+  background-color: var(--color-indigo-100);
+  background-blend-mode: multiply;
+  background-size: contain;
+}
+
+.pr-freight-direction {
+  flex-direction: unset;
+}
+
+.pr-image-freight-home {
+  width: 500px;
+  height: auto;
+}
+
+.pr-text-btn-freight {
+  margin-left: auto;
+  padding-left: 3rem;
+  padding-bottom: unset;
+  padding-right: unset;
+}
+
+.pr-text-freight {
+  font-family: AkiraExpandedDemo;
+  color: var(--color-light-blue);
+  font-size: 30px;
+  max-width: 50rem;
+  margin-top: 1.9rem;
+  margin-bottom: 1.9rem;
+}
+
+.pr-middle-text-freight {
+  color: var(--color-light-blue-lighter);
+}
+
+@media (max-width: 1260px) {
+  .pr-text-freight {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 1207px) {
   .pr-display-home {
-   flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
 
-  .pr-mission-check, .pr-vision-check {
+  .pr-mission-check,
+  .pr-vision-check {
     max-width: 55rem;
   }
 
@@ -113,20 +172,46 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
   }
 }
 
-@media(max-width: 725px) {
+@media (max-width: 1018px) {
+  .pr-text-freight {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 871px) {
+  .pr-text-freight {
+    font-size: 20px;
+  }
+
+  .pr-freight-direction {
+    flex-direction: column;
+  }
+
+  .pr-image-freight-home {
+    width: auto;
+  }
+
+  .pr-text-btn-freight {
+    margin-left: unset;
+    padding-bottom: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (max-width: 725px) {
   .pr-image-ms-home {
     width: 300px;
   }
 }
 
-@media(max-width: 625px) {
+@media (max-width: 625px) {
   .px-20 {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   .pr-image-ms-home {
     width: 250px;
   }
@@ -136,13 +221,24 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
   }
 }
 
-@media(max-width: 400px) {
+@media (max-width: 400px) {
   .pr-image-ms-home {
     width: 200px;
   }
 }
 
-@media(max-width: 350px) {
+@media (max-width: 382px) {
+  .pr-text-freight {
+    font-size: 17px;
+  }
+
+  .pr-text-btn-freight {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 350px) {
   .pr-image-ms-home {
     width: 150px;
   }
