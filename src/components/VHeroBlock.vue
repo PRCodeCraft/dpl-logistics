@@ -1,4 +1,8 @@
-<script lang="ts"></script>
+<script lang="ts">
+  export default {
+    name: 'VHeroBlock',
+  }
+</script>
 
 <template>
   <section class="pr-background-image-hero">

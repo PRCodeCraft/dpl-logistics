@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import VMountain from '../components/VMountain.vue'
-import VHeroBlock from '../components/VHeroBlock.vue'
+import VMountain from '@/components/VMountain.vue'
+import VHeroBlock from '@/components/VHeroBlock.vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import VSimpleCard from '@/components/VSimpleCard.vue'
