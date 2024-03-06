@@ -1,4 +1,8 @@
-<script lang="ts"></script>
+<script lang="ts">
+  export default {
+    name: 'VMountain',
+  }
+</script>
 
 <template>
   <div class="relative">
@@ -16,6 +20,7 @@
   z-index: 0;
   width: 100%;
   height: 100%;
+  min-height: 100vh;
 }
 
 .pr-logo-between-img {

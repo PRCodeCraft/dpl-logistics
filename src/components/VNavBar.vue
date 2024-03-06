@@ -1,6 +1,5 @@
 <script lang="ts">
 import { ref } from 'vue';
-import dpllogo from '../assets/dpllogo.png';
 let navbarItemArray = ['home', 'about', 'contact', 'services', 'carrier']
 export default {
   setup() {
@@ -30,10 +29,10 @@ export default {
 
 <template>
   <div class="pr-background-navbar">
-    <nav class="container px-6 py-1 mx-auto md:flex md:justify-around md:items-center">
-      <div class="flex items-center justify-around">
+    <nav class="container py-1 mx-auto md:flex md:justify-between md:items-center px-12 mx-auto max-w-screen-xl">
+      <div class="flex items-center justify-between">
         <router-link to="/" class="text-xl font-bold text-gray-100 md:text-2xl"
-          ><img src="../assets/dpllogo.png" alt="dpl logo" width="150" height="150" class="mt-3 mb-3">
+          ><img src="../assets/dpllogo.png" alt="dpl logo" width="100" height="100" class="mt-3 mb-3">
         </router-link>
         <!-- Mobile menu button -->
         <div @click="toggleNav" class="flex md:hidden">
@@ -78,7 +77,7 @@ export default {
 
 <style>
 .pr-background-navbar {
-  background-color: var(--color-indigo);
+  background-color: var(--color-indigo-100);
 }
 
 .pr-navbar-item:hover, .pr-navbar-item:focus {
@@ -89,6 +88,10 @@ export default {
     border-bottom: 2px solid var(--color-light-blue-lighter);
     padding-bottom: 2px;
   
+}
+
+.pr-navbar-item {
+    font-family: MundialLight;
 }
 
 .pr-navbar-item:not(:has(.pr-navbar-item-active))::after  {
