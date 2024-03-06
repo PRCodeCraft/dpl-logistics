@@ -75,14 +75,14 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
       <div class="pr-even-simple-card">
         <VSimpleCard
           title="Safety first"
-          content="Your cargo's safety is our top priority. Our drivers undergo rigorous training and strictly adhere to safety protocols, ensuring the secure transportation of your goods."
+          content="Your cargo’s safety is our top priority. Our drivers undergo rigorous training and strictly adhere to safety protocols, ensuring the secure transportation of your goods."
           :is-link="false"
         />
       </div>
       <div class="pr-odd-simple-card">
         <VSimpleCard
           title="Flexible solutions"
-          content="Regardless of your load's size or complexity, we offer customized flatbed solutions to meet your transportation needs effectively."
+          content="Regardless of your load’s size or complexity, we offer customized flatbed solutions to meet your transportation needs effectively."
           :is-link="false"
         />
       </div>
