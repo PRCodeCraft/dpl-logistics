@@ -3,6 +3,7 @@ import VMountain from '../components/VMountain.vue'
 import VHeroBlock from '../components/VHeroBlock.vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import VSimpleCard from '@/components/VSimpleCard.vue'
 </script>
 
 <template>
@@ -51,6 +52,54 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
         >
       </div>
       <img src="../assets/lorryHome2.jpg" alt="lorry on the road" class="pr-image-freight-home" />
+    </div>
+  </div>
+  <!-- Why choose us section  -->
+  <div class="my-16">
+    <div class="flex justify-center mb-16 pr-title-choose-us">Why choose us ?</div>
+    <div class="flex justify-center">
+      <div class="pr-content-choose-us">
+        What set us apart is our seasoned expertise as brokers with over a decade of experience,
+        ensuring we understand the precise trucking solutions needed to fulfill your requirements
+        with utmost professionalism.
+      </div>
+    </div>
+    <div class="grid grid-cols-2 justify-items-stretch gap-x-8 gap-y-8">
+      <div class="pr-odd-simple-card">
+        <VSimpleCard
+          title="Dependable service"
+          content="We take pride in our commitment to reliability. Count on us for punctual deliveries and transparent, consistent communication."
+          :is-link="false"
+        />
+      </div>
+      <div class="pr-even-simple-card">
+        <VSimpleCard
+          title="Safety first"
+          content="Your cargo's safety is our top priority. Our drivers undergo rigorous training and strictly adhere to safety protocols, ensuring the secure transportation of your goods."
+          :is-link="false"
+        />
+      </div>
+      <div class="pr-odd-simple-card">
+        <VSimpleCard
+          title="Flexible solutions"
+          content="Regardless of your load's size or complexity, we offer customized flatbed solutions to meet your transportation needs effectively."
+          :is-link="false"
+        />
+      </div>
+      <div class="pr-even-simple-card">
+        <VSimpleCard
+          title="Nationwide reach"
+          content="From coast to coast, our efficient flatbed shipping solutions cover the entire country. Benefit from our extensive network, providing reliable service across diverse geographical locations."
+          :is-link="false"
+        />
+      </div>
+    </div>
+    <div class="flex justify-center mt-16">
+      <router-link
+        to="/contact"
+        class="inline-flex items-center justify-center px-5 py-3 pr-btn-request-quote"
+        >Request a quote</router-link
+      >
     </div>
   </div>
   <VMountain />
@@ -146,6 +195,53 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
   color: var(--color-light-blue-lighter);
 }
 
+.pr-title-choose-us {
+  font-family: AkiraExpandedDemo;
+  color: var(--color-indigo-100);
+  font-size: 20px;
+  position: relative;
+}
+
+.pr-title-choose-us:after {
+  content: '';
+  position: absolute;
+  width: 5%;
+  padding-top: 40px;
+  border-bottom: 2px solid var(--color-light-blue-lighter);
+}
+
+.pr-content-choose-us {
+  font-family: AkiraExpandedDemo;
+  color: var(--color-indigo-100);
+  font-size: 12px;
+  max-width: 38rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+.pr-odd-simple-card {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pr-even-simple-card {
+  display: unset;
+  justify-content: unset;
+}
+
+.pr-btn-request-quote {
+  font-family: AkiraExpandedDemo;
+  color: var(--color-white);
+  background-color: var(--color-indigo-100);
+  font-size: unset;
+}
+
+.pr-btn-request-quote:hover,
+.pr-btn-request-quote:focus {
+  color: var(--color-indigo-80);
+  background-color: var(--color-gray-100);
+}
+
 @media (max-width: 1260px) {
   .pr-text-freight {
     font-size: 25px;
@@ -178,6 +274,17 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
   }
 }
 
+@media (max-width: 1000px) {
+  .grid-cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .pr-odd-simple-card,
+  .pr-even-simple-card {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 871px) {
   .pr-text-freight {
     font-size: 20px;
@@ -202,6 +309,25 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
   .pr-image-ms-home {
     width: 300px;
   }
+
+  .pr-btn-request-quote {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 635px) {
+  .pr-title-choose-us {
+    font-size: 15px;
+  }
+
+  .pr-content-choose-us {
+    font-size: 10px;
+    max-width: 30rem;
+  }
+
+  .pr-btn-request-quote {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 625px) {
@@ -219,11 +345,37 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+
+  .pr-content-choose-us {
+    max-width: 22rem;
+  }
+
+  .pr-title-text-sc {
+    font-size: 18px;
+  }
+
+  .pr-content-text-sc {
+    font-size: 14px;
+  }
+
+  .pr-container-simple-card {
+    width: 22rem;
+    height: 12rem;
+  }
 }
 
 @media (max-width: 400px) {
   .pr-image-ms-home {
     width: 200px;
+  }
+
+  .pr-container-simple-card {
+    width: 18rem;
+    height: 13rem;
+  }
+
+  .pr-content-choose-us {
+    max-width: 18rem;
   }
 }
 
@@ -241,6 +393,17 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
 @media (max-width: 350px) {
   .pr-image-ms-home {
     width: 150px;
+  }
+}
+
+@media (max-width: 300px) {
+  .pr-container-simple-card {
+    width: 17rem;
+    height: 13rem;
+  }
+
+  .pr-content-choose-us {
+    max-width: 17rem;
   }
 }
 </style>
