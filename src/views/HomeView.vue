@@ -55,7 +55,7 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
     </div>
   </div>
   <!-- Why choose us section  -->
-  <div class="my-16">
+  <div class="py-16 pr-background-request-quote">
     <div class="flex justify-center mb-16 pr-title-choose-us">Why choose us ?</div>
     <div class="flex justify-center">
       <div class="pr-content-choose-us">
@@ -94,7 +94,7 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
         />
       </div>
     </div>
-    <div class="flex justify-center mt-16">
+    <div class="flex justify-center pt-16">
       <router-link
         to="/contact"
         class="inline-flex items-center justify-center px-5 py-3 pr-btn-request-quote"
@@ -193,6 +193,13 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
 
 .pr-middle-text-freight {
   color: var(--color-light-blue-lighter);
+}
+
+.pr-background-request-quote {
+  background: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.9)), url('../assets/neumatic.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .pr-title-choose-us {
