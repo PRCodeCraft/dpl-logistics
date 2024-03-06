@@ -59,16 +59,16 @@ export default {
           <router-link to="/" id="home">Home</router-link>
         </li>
         <li class="text-gray-100 pr-navbar-item relative" @click="updateNavBarItem('about')">
-          <router-link to="/about" id="about">About us</router-link>
+          <router-link to="/About" id="about">About us</router-link>
         </li>
         <li class="text-gray-100 pr-navbar-item relative" @click="updateNavBarItem('contact')">
-          <router-link to="/contact" id="contact">Contact us</router-link>
+          <router-link to="/Contact" id="contact">Contact us</router-link>
         </li>
         <li class="text-gray-100 pr-navbar-item relative" @click="updateNavBarItem('services')">
-          <router-link to="/services" id="services">Services</router-link>
+          <router-link to="/Services" id="services">Services</router-link>
         </li>
         <li class="text-gray-100 pr-navbar-item relative" @click="updateNavBarItem('carrier')">
-          <router-link to="/carrier" id="carrier">Carrier</router-link>
+          <router-link to="/Carrier" id="carrier">Carrier</router-link>
         </li>
       </ul>
     </nav>

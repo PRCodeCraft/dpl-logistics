@@ -46,7 +46,7 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
           <span class="pr-middle-text-freight">prompt and reliable</span> transportation?
         </div>
         <router-link
-          to="/contact"
+          to="/Contact"
           class="inline-flex items-center justify-center px-5 py-3 pr-btn-hero"
           >Give us a call</router-link
         >
@@ -96,7 +96,7 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
     </div>
     <div class="flex justify-center pt-16">
       <router-link
-        to="/contact"
+        to="/Contact"
         class="inline-flex items-center justify-center px-5 py-3 pr-btn-request-quote"
         >Request a quote</router-link
       >

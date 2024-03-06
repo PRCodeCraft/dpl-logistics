@@ -20,7 +20,7 @@
           quality deliveries
         </p>
         <router-link
-          to="/contact"
+          to="/Contact"
           class="inline-flex items-center justify-center px-5 py-3 pr-btn-hero"
           >Contact us</router-link
         >
