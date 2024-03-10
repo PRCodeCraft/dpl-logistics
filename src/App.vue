@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
-import VNavBar from './components/VNavBar.vue'
+import VNavBar from './components/VNavBar.vue';
+import VFooter from './components/VFooter.vue';
 </script>
 
 <template>
@@ -14,6 +14,7 @@ import VNavBar from './components/VNavBar.vue'
         <component :is="Component"></component>
     </RouterView>
   </div>
+  <VFooter/>
 </template>
 
 <style scoped>

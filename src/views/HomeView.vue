@@ -39,8 +39,8 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
   </div>
   <!-- Freight - give us a call section  -->
   <div class="pr-background-freight">
-    <div class="flex justify-end gap-x-14 pr-freight-direction">
-      <div class="pr-text-btn-freight">
+    <div class="flex justify-between pr-freight-direction">
+      <div class="pr-text-btn-freight mx-auto">
         <div class="pr-text-freight">
           Do you have freight that requires
           <span class="pr-middle-text-freight">prompt and reliable</span> transportation?
@@ -176,8 +176,11 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
   </div>
   <!-- Dakota image section  -->
   <div class="pr-background-image-dakota">
-    <div class="pr-img-container-dakota py-24">
+    <div class="pr-img-container-dakota pt-24 pb-3">
       <img src="../assets/Dakota.png" alt="vp logistic owner" width="620" height="620" class="pr-img-dakota" />
+    </div>
+    <div class="flex justify-center pb-24 pr-vp-text">
+      Dakota Wendel, VP Logistics
     </div>
   </div>
 </template>
@@ -253,10 +256,9 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
 }
 
 .pr-text-btn-freight {
-  margin-left: auto;
-  padding-left: 3rem;
+  padding-left: 6.5rem;
   padding-bottom: unset;
-  padding-right: unset;
+  padding-right: 1rem;
 }
 
 .pr-text-freight {
@@ -385,6 +387,19 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
   filter: drop-shadow(5px 5px 5px #666666);
 }
 
+.pr-vp-text {
+  font-family: MundialLight;
+  font-size: 18px;
+  color: var(--color-indigo-100);
+  font-weight: 600;
+}
+
+@media (max-width: 1280px) {
+  .pr-text-btn-freight {
+    padding-left: 3rem;
+  }
+}
+
 @media (max-width: 1260px) {
   .pr-text-freight {
     font-size: 25px;
@@ -453,9 +468,7 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
   }
 
   .pr-text-btn-freight {
-    margin-left: unset;
     padding-bottom: 3rem;
-    padding-right: 3rem;
   }
 }
 
@@ -551,7 +564,6 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
 
   .pr-text-btn-freight {
     padding-left: 1rem;
-    padding-right: 1rem;
   }
 }
 
