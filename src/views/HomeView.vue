@@ -9,7 +9,7 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
 <template>
   <VHeroBlock />
   <!-- Mision & Vision section  -->
-  <div class="pr-background-brand py-24 px-20">
+  <div class="pr-background-brand py-36 px-20">
     <div class="pr-background-white">
       <div class="pr-display-home mx-auto max-w-screen-xl">
         <div class="p-12 pr-display-img-mv">
@@ -39,8 +39,8 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
   </div>
   <!-- Freight - give us a call section  -->
   <div class="pr-background-freight">
-    <div class="flex justify-end gap-x-14 pr-freight-direction">
-      <div class="pr-text-btn-freight">
+    <div class="flex justify-between pr-freight-direction">
+      <div class="pr-text-btn-freight mx-auto">
         <div class="pr-text-freight">
           Do you have freight that requires
           <span class="pr-middle-text-freight">prompt and reliable</span> transportation?
@@ -102,7 +102,87 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
       >
     </div>
   </div>
+  <!-- Mountain section  -->
   <VMountain />
+  <!-- Truck icons section  -->
+  <div class="pr-background-truck-icons">
+    <div class="flex justify-center mb-16 pr-title-choose-us pt-24">Services offered</div>
+    <div class="flex justify-center">
+      <div class="pr-content-choose-us">
+        Experience a comprehensive range of logistics options tailored to meet your diverse
+        transportation needs.
+      </div>
+    </div>
+    <div class="grid grid-cols-3 mx-auto pr-truck-container-max-width gap-y-8 gap-x-8 pb-8">
+      <div class="pr-truck-icon-odd">
+        <div class="pr-truck-icon-max-width">
+          <img
+            src="../assets/iconTrucks/icons_flat_bed.png"
+            alt="flat bed truck icon"
+            width="180"
+          />
+        </div>
+        <div class="pr-title-truck-icon">Flat Bed</div>
+        <div class="pr-description-truck-icon">Versatile solutions for various cargo types</div>
+      </div>
+      <div class="pr-truck-icon-even">
+        <div class="pr-truck-icon-max-width">
+          <img src="../assets/iconTrucks/icons_dry_van.png" alt="dry van truck icon" width="180" />
+        </div>
+        <div class="pr-title-truck-icon">Dry Van</div>
+        <div class="pr-description-truck-icon">Efficient transportation with enclosed storage</div>
+      </div>
+      <div class="pr-truck-icon-odd">
+        <div class="pr-truck-icon-max-width">
+          <img
+            src="../assets/iconTrucks/icons_box_truck.png"
+            alt="box truck truck icon"
+            width="180"
+          />
+        </div>
+        <div class="pr-title-truck-icon">Box Truck</div>
+        <div class="pr-description-truck-icon">
+          Tailored for partial truck shipments when a full 53 dry van is not required
+        </div>
+      </div>
+      <div class="pr-truck-icon-even">
+        <div class="pr-truck-icon-max-width">
+          <img src="../assets/iconTrucks/icons_hot_shot.png" alt="hotshot truck icon" width="180" />
+        </div>
+        <div class="pr-title-truck-icon">Hotshot</div>
+        <div class="pr-description-truck-icon">Swift and dedicated expedited services</div>
+      </div>
+      <div class="pr-truck-icon-odd">
+        <div class="pr-truck-icon-max-width">
+          <img
+            src="../assets/iconTrucks/icons_refrigerated.png"
+            alt="refrigerated truck icon"
+            width="180"
+          />
+        </div>
+        <div class="pr-title-truck-icon">Refrigerated</div>
+        <div class="pr-description-truck-icon">
+          Prioritized, expedited shipping for urge deliveries
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center pt-16 pb-24">
+      <router-link
+        to="/Services"
+        class="inline-flex items-center justify-center px-5 py-3 pr-btn-request-quote"
+        >Services</router-link
+      >
+    </div>
+  </div>
+  <!-- Dakota image section  -->
+  <div class="pr-background-image-dakota">
+    <div class="pr-img-container-dakota pt-24 pb-3">
+      <img src="../assets/Dakota.png" alt="vp logistic owner" width="620" height="620" class="pr-img-dakota" />
+    </div>
+    <div class="flex justify-center pb-24 pr-vp-text">
+      Dakota Wendel, VP Logistics
+    </div>
+  </div>
 </template>
 
 <style>
@@ -176,10 +256,9 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
 }
 
 .pr-text-btn-freight {
-  margin-left: auto;
-  padding-left: 3rem;
+  padding-left: 6.5rem;
   padding-bottom: unset;
-  padding-right: unset;
+  padding-right: 1rem;
 }
 
 .pr-text-freight {
@@ -196,7 +275,8 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
 }
 
 .pr-background-request-quote {
-  background: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.9)), url('../assets/neumatic.png');
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+    url('../assets/neumatic.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -249,6 +329,77 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
   background-color: var(--color-gray-100);
 }
 
+.pr-truck-container-max-width {
+  max-width: 65rem;
+}
+
+.pr-background-truck-icons {
+  background-color: var(--color-light-blue-lighter-plus);
+}
+
+.pr-truck-icon-max-width {
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.pr-title-truck-icon {
+  max-width: 300px;
+  font-family: Mundial;
+  font-weight: 900;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.pr-description-truck-icon {
+  max-width: 300px;
+  font-family: MundialLight;
+  font-size: 16px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.pr-truck-icon-odd,
+.pr-truck-icon-even {
+  display: unset;
+  justify-content: unset;
+}
+
+.pr-background-image-dakota {
+  background-image: url('../assets/wallpaper2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode:darken;
+
+}
+
+.pr-img-container-dakota {
+  display: flex;
+  justify-content: center;
+}
+
+.pr-img-dakota {
+  border: 5px solid var(--color-light-blue-intense);
+  -webkit-filter: drop-shadow(5px 5px 5px #666666);
+  filter: drop-shadow(5px 5px 5px #666666);
+}
+
+.pr-vp-text {
+  font-family: MundialLight;
+  font-size: 18px;
+  color: var(--color-indigo-100);
+  font-weight: 600;
+}
+
+@media (max-width: 1280px) {
+  .pr-text-btn-freight {
+    padding-left: 3rem;
+  }
+}
+
 @media (max-width: 1260px) {
   .pr-text-freight {
     font-size: 25px;
@@ -272,6 +423,17 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
 
   .p-12 {
     padding-top: 1rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pr-truck-icon-odd {
+    display: grid;
+    justify-content: flex-end;
   }
 }
 
@@ -306,9 +468,7 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
   }
 
   .pr-text-btn-freight {
-    margin-left: unset;
     padding-bottom: 3rem;
-    padding-right: 3rem;
   }
 }
 
@@ -319,6 +479,17 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
 
   .pr-btn-request-quote {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .grid-cols-3 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .pr-truck-icon-even,
+  .pr-truck-icon-odd {
+    display: grid;
+    justify-content: center;
   }
 }
 
@@ -393,13 +564,18 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
 
   .pr-text-btn-freight {
     padding-left: 1rem;
-    padding-right: 1rem;
   }
 }
 
 @media (max-width: 350px) {
   .pr-image-ms-home {
     width: 150px;
+  }
+
+  .pr-truck-icon-max-width,
+  .pr-title-truck-icon,
+  .pr-description-truck-icon {
+    max-width: 280px;
   }
 }
 
