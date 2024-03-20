@@ -1,28 +1,23 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
-import VNavBar from './components/VNavBar.vue'
+import VNavBar from './components/VNavBar.vue';
+import VFooter from './components/VFooter.vue';
 </script>
 
 <template>
-  <VNavBar></VNavBar>
-  <div id="main-container">
-    <RouterView v-slot="{ Component }">
-      <Transition name="slide" mode="out-in">
+  <VNavBar/>
+  <div>
+    <!-- No funciona bien el transition -->
+    <!-- <Transition name="slide" mode="out-in">
         <component :is="Component"></component>
-      </Transition>
+      </Transition> -->
+    <RouterView v-slot="{ Component }">
+        <component :is="Component"></component>
     </RouterView>
   </div>
+  <VFooter/>
 </template>
 
 <style scoped>
-
-#main-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  min-height: 100vh;
-}
 
 .slide-enter-active, .slide-leave-active {
   transition: all 0.3s ease-in-out;
