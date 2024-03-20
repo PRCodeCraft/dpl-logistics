@@ -102,8 +102,6 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
       >
     </div>
   </div>
-  <!-- Mountain section  -->
-  <VMountain />
   <!-- Truck icons section  -->
   <div class="pr-background-truck-icons">
     <div class="flex justify-center mb-16 pr-title-choose-us pt-24">Services offered</div>
@@ -174,14 +172,20 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
       >
     </div>
   </div>
+  <!-- Mountain section  -->
+  <VMountain />
   <!-- Dakota image section  -->
   <div class="pr-background-image-dakota">
     <div class="pr-img-container-dakota pt-24 pb-3">
-      <img src="../assets/Dakota.png" alt="vp logistic owner" width="620" height="620" class="pr-img-dakota" />
+      <img
+        src="../assets/Dakota.png"
+        alt="vp logistic owner"
+        width="620"
+        height="620"
+        class="pr-img-dakota"
+      />
     </div>
-    <div class="flex justify-center pb-24 pr-vp-text">
-      Dakota Wendel, VP Logistics
-    </div>
+    <div class="flex justify-center pb-24 pr-vp-text">Dakota Wendel, VP Logistics</div>
   </div>
 </template>
 
@@ -372,8 +376,7 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-blend-mode:darken;
-
+  background-blend-mode: darken;
 }
 
 .pr-img-container-dakota {

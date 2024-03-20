@@ -32,7 +32,7 @@ export default {
       >
         <li class="flex pr-text-footer items-center gap-1">
           <FontAwesomeIcon :icon="faEnvelope" class="pr-icon-footer"/>
-          <a href="mailto: sales@dpl-logistics.com">sales@dpl-logistics.com</a>
+          <a href="mailto: sales@dpl-logistics.com" class="font-semibold">sales@dpl-logistics.com</a>
         </li>
         <li class="pr-text-footer"><FontAwesomeIcon :icon="faPhone" class="pr-icon-footer"/>+1 303 915-4272</li>
       </ul>

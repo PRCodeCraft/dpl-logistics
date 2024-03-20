@@ -1,6 +1,14 @@
 <script lang="ts">
+import VButton from '@/components/VButton.vue';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'   
   export default {
     name: 'VHeroBlock',
+    components: {
+    VButton,
+    FontAwesomeIcon,
+    faCheck,
+  },
   }
 </script>
 
@@ -24,6 +32,7 @@
           class="inline-flex items-center justify-center px-5 py-3 pr-btn-hero"
           >Contact us</router-link
         >
+        <VButton to="/Contact" hasIcon="true" icon="faCheck" buttonText="Contact us"/>
       </div>
     </div>
   </section>
@@ -46,19 +55,6 @@
   font-family: Mundial;
   font-weight: 900;
   color: var(--color-light-blue-lighter);
-}
-
-.pr-btn-hero {
-  font-family: AkiraExpandedDemo;
-  color: var(--color-indigo-100);
-  background-color: var(--color-white);
-  font-size: unset;
-}
-
-.pr-btn-hero:hover,
-.pr-btn-hero:focus {
-  color: var(--color-indigo-80);
-  background-color: var(--color-gray-100);
 }
 
 .pr-max-width-hero {
