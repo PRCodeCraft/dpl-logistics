@@ -124,3 +124,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main footer {
+  margin-top: auto;
+}
