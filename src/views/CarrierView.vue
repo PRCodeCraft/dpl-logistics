@@ -1,3 +1,3 @@
 <template>
-    <h1>Carrier</h1>
+    <h1 class="color-black">Carrier</h1>
 </template>
