@@ -35,6 +35,7 @@
   --color-blue-40: #aaafb9;
   --color-blue-20: #cfcfd2;
 
+  --color-light-gray-100: #f0f4fc;
 
  
  
@@ -123,4 +124,14 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main footer {
+  margin-top: auto;
 }

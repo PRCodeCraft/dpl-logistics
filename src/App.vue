@@ -4,17 +4,19 @@ import VFooter from './components/VFooter.vue';
 </script>
 
 <template>
-  <VNavBar/>
-  <div>
-    <!-- No funciona bien el transition -->
-    <!-- <Transition name="slide" mode="out-in">
+  <main>
+    <VNavBar/>
+    <div>
+      <!-- No funciona bien el transition -->
+      <!-- <Transition name="slide" mode="out-in">
         <component :is="Component"></component>
       </Transition> -->
-    <RouterView v-slot="{ Component }">
+      <RouterView v-slot="{ Component }">
         <component :is="Component"></component>
-    </RouterView>
-  </div>
-  <VFooter/>
+      </RouterView>
+    </div>
+    <VFooter/>
+  </main>
 </template>
 
 <style scoped>
