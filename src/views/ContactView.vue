@@ -2,9 +2,9 @@
 import VHeroBlock from '@/components/VHeroBlock.vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faPhone, faArrowRight } from '@fortawesome/free-solid-svg-icons'
-
 import emailjs from '@emailjs/browser';
 import { ref } from 'vue';
+import Swal from 'sweetalert2'
 const form = ref();
 function sendEmail() {
     emailjs
@@ -13,13 +13,18 @@ function sendEmail() {
         })
         .then(
             () => {
-                console.log('SUCCESS!');
+                showAlertMessage();
             },
             (error) => {
                 console.log('FAILED...', error.text);
             },
         );
 }
+
+function showAlertMessage() {
+    Swal.fire('Email sent successfully! You will be contacted soon.');
+}
+
 </script>
 
 <template>
