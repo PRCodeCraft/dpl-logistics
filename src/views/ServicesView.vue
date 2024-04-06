@@ -13,15 +13,16 @@
             transportation needs.
           </div>
         </div>
-        <div class="flex items-center">
+        <div class="flex items-center pr-services-cardsgroup">
           <FontAwesomeIcon
             :icon="faChevronLeft"
+            v-if="!isMobile"
             class="pr-chevron pr-chevron-left cursor-pointer"
             @click="previousCards"
           />
-          <div class="pl-24 flex">
+          <div class="pl-24 flex justify-center pr-cards">
             <template v-for="(card, index) in displayedCards" :key="index">
-              <div class="pr-8" :class="{ animate: isAnimating }">
+              <div class="pr-8 pr-single-card" :class="{ animate: isAnimating }">
                 <img
                   :src="`/src/assets/services/${card.image}`"
                   :alt="card.title"
@@ -36,6 +37,7 @@
           </div>
           <FontAwesomeIcon
             :icon="faChevronRight"
+            v-if="!isMobile"
             class="pr-chevron pr-chevron-right cursor-pointer"
             @click="nextCards"
           />
@@ -97,12 +99,32 @@ const cards = ref([
 ])
 
 const currentIndex = ref(0)
-
-const cardsPerPage = 3
+let isMobile = false
+const cardsPerPage = ref(3)
 const isAnimating = ref(false)
 
+const updateCardsPerPage = () => {
+  if (window.innerWidth < 1130 && window.innerWidth >= 900) {
+    cardsPerPage.value = 2
+    isMobile = false
+  } else if (window.innerWidth < 900) {
+    cardsPerPage.value = 6
+    isMobile = true
+  } else {
+    cardsPerPage.value = 3
+    isMobile = false
+  }
+}
+
+// Llama a la función para actualizar el número de tarjetas al cargar la página
+updateCardsPerPage()
+
+// Actualiza el número de tarjetas al cambiar el tamaño de la pantalla
+window.addEventListener('resize', updateCardsPerPage)
+
 const previousCards = () => {
-  currentIndex.value = (currentIndex.value - cardsPerPage + cards.value.length) % cards.value.length
+  currentIndex.value =
+    (currentIndex.value - cardsPerPage.value + cards.value.length) % cards.value.length
   isAnimating.value = true
   setTimeout(() => {
     isAnimating.value = false
@@ -110,7 +132,7 @@ const previousCards = () => {
 }
 
 const nextCards = () => {
-  currentIndex.value = (currentIndex.value + cardsPerPage) % cards.value.length
+  currentIndex.value = (currentIndex.value + cardsPerPage.value) % cards.value.length
   isAnimating.value = true
   setTimeout(() => {
     isAnimating.value = false
@@ -119,7 +141,7 @@ const nextCards = () => {
 
 const displayedCards = computed(() => {
   const startIndex = currentIndex.value
-  return cards.value.slice(startIndex, startIndex + cardsPerPage)
+  return cards.value.slice(startIndex, startIndex + cardsPerPage.value)
 })
 </script>
 <style scoped>
@@ -129,7 +151,7 @@ const displayedCards = computed(() => {
 .overlap-box {
   position: relative;
   top: -40px;
-  width: 70%;
+  width: 70em;
   height: 47em;
   border-radius: 15px;
   margin: auto;
@@ -214,6 +236,14 @@ const displayedCards = computed(() => {
   padding-bottom: 1.3rem;
 }
 
+.pr-cards {
+  flex-direction: unset;
+}
+
+.animate {
+  animation: slideInFromLeft 0.5s ease-in-out;
+}
+
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-3%);
@@ -225,7 +255,75 @@ const displayedCards = computed(() => {
   }
 }
 
-.animate {
-  animation: slideInFromLeft 0.5s ease-in-out;
+@media (max-width: 1130px) {
+  .overlap-box {
+    width: 55em;
+  }
+
+  .pr-cards {
+    padding-left: 2rem;
+  }
+
+  .pr-services-cardsgroup {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .overlap-box {
+    width: 30em;
+    height: 180em;
+  }
+
+  .pr-cards {
+    flex-direction: column;
+  }
+
+  .pr-single-card {
+    padding-bottom: 2rem;
+  }
+
+  .pr-services-title-1::after {
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 550px) {
+  .overlap-box {
+    width: 22em;
+  }
+
+  .px-24 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .pr-services-title-1::after {
+    left: 2rem;
+  }
+}
+
+@media (max-width: 370px) {
+  .overlap-box {
+    width: 17em;
+    height: 187em;
+  }
+
+  .pr-img-services {
+    width: 230px;
+  }
+
+  .pl-24 {
+    padding-left: 2rem;
+  }
+
+  .pr-card-services {
+    width: 230px;
+  }
+
+  .px-24 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 </style>
