@@ -191,4 +191,33 @@ input[type="submit"] {
     font-family: AkiraExpandedDemo;
     color: var(--color-light-blue);
 }
+
+@media (max-width: 1260px) {
+    .input-row{
+        flex-direction: column;
+        gap: 0px;
+    }
+    .overlap-box{
+        height: 60em;
+    }
+    .form{
+       padding: 0px 2em; 
+    }
+    .form-title{
+        margin-left: 2em;
+    }
+    .form-title-underline{
+        margin-left: 2em;
+        margin-bottom: 1em;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-footer{
+        flex-direction: column;
+    }
+    .form-title{
+        flex-direction: column;
+    }
+}
 </style>
