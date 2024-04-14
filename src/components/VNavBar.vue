@@ -1,6 +1,6 @@
 <script lang="ts">
 import { ref } from 'vue';
-let navbarItemArray = ['home', 'about', 'contact', 'services', 'carrier']
+let navbarItemArray = ['home', 'about', 'contact', 'services', 'carriers']
 export default {
   setup() {
     let showMenu = ref(false)
@@ -67,8 +67,8 @@ export default {
         <li class="text-gray-100 pr-navbar-item relative" @click="updateNavBarItem('services')">
           <router-link to="/Services" id="services">Services</router-link>
         </li>
-        <li class="text-gray-100 pr-navbar-item relative" @click="updateNavBarItem('carrier')">
-          <router-link to="/Carrier" id="carrier">Carrier</router-link>
+        <li class="text-gray-100 pr-navbar-item relative" @click="updateNavBarItem('carriers')">
+          <router-link to="/Carriers" id="carriers">Carriers</router-link>
         </li>
       </ul>
     </nav>

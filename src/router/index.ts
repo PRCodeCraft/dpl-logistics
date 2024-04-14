@@ -24,8 +24,8 @@ const router = createRouter({
       component: ServicesView
     },
     {
-      path: '/carrier',
-      name: 'carrier',
+      path: '/carriers',
+      name: 'carriers',
       component: CarrierView
     },
     {
