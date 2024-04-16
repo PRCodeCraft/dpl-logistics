@@ -3,9 +3,16 @@ import VHeroBlock from '@/components/VHeroBlock.vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faPhone, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import emailjs from '@emailjs/browser';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import Swal from 'sweetalert2'
+
 const form = ref();
+const errorMsgs: any = ref([]);
+
+onMounted(() => {
+    
+});
+
 function sendEmail() {
     emailjs
         .sendForm('service_8xwe4qx', 'template_ihvvut6', form.value, {
@@ -21,13 +28,36 @@ function sendEmail() {
         );
 }
 
+function validateForm() {
+    
+    !form.value.elements[0].checkValidity() ? form.value.elements[0].setCustomValidity('Please enter your name') : form.value.elements[0].setCustomValidity('');
+    !form.value.elements[1].checkValidity() ? form.value.elements[1].setCustomValidity('Please enter your email') : form.value.elements[1].setCustomValidity('');
+    !form.value.elements[2].checkValidity() ? form.value.elements[2].setCustomValidity('Please enter your phone number') : form.value.elements[2].setCustomValidity('');
+    !form.value.elements[3].checkValidity() ? form.value.elements[3].setCustomValidity('Please enter your subject') : form.value.elements[3].setCustomValidity('');
+    !form.value.elements[4].checkValidity() ? form.value.elements[4].setCustomValidity('Please enter your message') : form.value.elements[4].setCustomValidity('');
+
+    errorMsgs.value = [];
+    for (let i = 0; i < form.value.elements.length; i++) {
+        const element = form.value.elements[i];
+        if (!element.checkValidity()) {
+            errorMsgs.value.push(element.validationMessage);
+        }
+    }
+
+    // if (form.value.checkValidity()) {
+    //     sendEmail();
+    // } else {
+    //     form.value.reportValidity();
+    // }
+}
+
 function showAlertMessage() {
     Swal.fire('Email sent successfully! You will be contacted soon.');
 }
 
 </script>
 
-<template>
+<template style="background-color: red;">
     <VHeroBlock imageUrl="./src/assets/hero_contact.png" title="Contact Us" />
     <div class="overlap-box">
         <div class="form-title">
@@ -37,7 +67,7 @@ function showAlertMessage() {
             </div>
         </div>
         <div class="form-title-underline"></div>
-        <form method="post" class="form" ref="form" @submit.prevent="sendEmail">
+        <form method="post" class="form" ref="form">
             <div class="input-row">
                 <div>
                     <label for="name">Name</label>
@@ -64,9 +94,10 @@ function showAlertMessage() {
                     <textarea id="message" name="message" rows="5" required></textarea><br>
                 </div>
             </div>
+
             <div class="form-footer">
                 <div class="submit-container">
-                    <input type="submit" value="Send">
+                    <input type="submit" value="Send" @click="validateForm">
                     <span class="icon-container">
                         <FontAwesomeIcon :icon="faArrowRight" class="pr-icon-arrow" />
                     </span>
@@ -75,6 +106,11 @@ function showAlertMessage() {
                     <FontAwesomeIcon :icon="faPhone" class="pr-icon-footer" /><a href="tel:+13039154272">+1 303
                         915-4272</a>
                 </div>
+            </div>
+            <div class="error-msg">
+                <p v-for="msg in errorMsgs" :key="msg" class="error-text">
+                    {{ msg }}
+                </p>
             </div>
         </form>
     </div>
@@ -85,7 +121,7 @@ function showAlertMessage() {
     position: relative;
     top: -40px;
     width: 70%;
-    height: 40em;
+    height: max-content;
     border-radius: 15px;
     margin: auto;
     background-color: white;
@@ -99,6 +135,7 @@ function showAlertMessage() {
     align-items: center;
     padding: 10em;
     padding-top: 3em;
+    padding-bottom: 2em;
     color: gray;
 }
 
@@ -192,31 +229,45 @@ input[type="submit"] {
     color: var(--color-light-blue);
 }
 
+.error-msg {
+    color: #cc0000;
+    margin-right: auto;
+}
+
+.error-text {
+    margin: 0;
+}
+
 @media (max-width: 1260px) {
-    .input-row{
+    .input-row {
         flex-direction: column;
         gap: 0px;
     }
-    .overlap-box{
+
+    .overlap-box {
         height: 60em;
     }
-    .form{
-       padding: 0px 2em; 
+
+    .form {
+        padding: 0px 2em;
     }
-    .form-title{
+
+    .form-title {
         margin-left: 2em;
     }
-    .form-title-underline{
+
+    .form-title-underline {
         margin-left: 2em;
         margin-bottom: 1em;
     }
 }
 
 @media (max-width: 600px) {
-    .form-footer{
+    .form-footer {
         flex-direction: column;
     }
-    .form-title{
+
+    .form-title {
         flex-direction: column;
     }
 }
