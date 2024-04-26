@@ -8,15 +8,21 @@ import Swal from 'sweetalert2'
 const form = ref<HTMLFormElement | null>(null);
 const errorMsgs: any = ref([]);
 
-const formData = ref({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
+const name = ref({
+    msg: ''
 });
-
-
+const email = ref({
+    msg: ''
+});
+const phone = ref({
+    msg: ''
+});
+const subject = ref({
+    msg: ''
+});
+const message = ref({
+    msg: ''
+});
 
 function sendEmail() {
     if (form.value !== null) {
@@ -37,7 +43,7 @@ function sendEmail() {
 
 function validateForm() {
     errorMsgs.value = [];
-
+    console.log("hola");
     const elements = form.value?.elements;
 
     if (!elements) return;
@@ -47,6 +53,11 @@ function validateForm() {
     const phoneElement = elements[2] as HTMLInputElement;
     const subjectElement = elements[3] as HTMLInputElement;
     const messageElement = elements[4] as HTMLTextAreaElement;
+    nameElement.setCustomValidity('');
+    emailElement.setCustomValidity('');
+    phoneElement.setCustomValidity('');
+    subjectElement.setCustomValidity('');
+    messageElement.setCustomValidity('');
 
     nameElement.setCustomValidity(nameElement.checkValidity() ? '' : 'Please enter your name');
     emailElement.setCustomValidity(emailElement.checkValidity() ? '' : 'Please enter your email');
@@ -54,33 +65,29 @@ function validateForm() {
     subjectElement.setCustomValidity(subjectElement.checkValidity() ? '' : 'Please enter your subject');
     messageElement.setCustomValidity(messageElement.checkValidity() ? '' : 'Please enter your message');
 
+    name.value.msg = nameElement.validationMessage;
+    email.value.msg = emailElement.validationMessage;
+    phone.value.msg = phoneElement.validationMessage;
+    subject.value.msg = subjectElement.validationMessage;
+    message.value.msg = messageElement.validationMessage;
+
     for (let i = 0; i < elements.length; i++) {
         const element = elements[i] as HTMLInputElement | HTMLTextAreaElement;
         const errorIcon = element.nextElementSibling as HTMLElement;
 
         if (!element.checkValidity()) {
-            errorIcon.classList.add('show-error-icon'); // Add class to show icon
-        } else {
-            errorIcon.classList.remove('show-error-icon'); // Remove class to hide icon
-        }
-
-        if (!element.checkValidity()) {
             errorMsgs.value.push(element.validationMessage);
-        }
+            errorIcon.classList.add('show-error-icon');
+        } else {
+            errorIcon.classList.remove('show-error-icon');
+        }        
     }
-
 
     if (form.value?.checkValidity()) {
         sendEmail();
     } else {
         form.value?.reportValidity();
     }
-
-    nameElement.setCustomValidity('');
-    emailElement.setCustomValidity('');
-    phoneElement.setCustomValidity('');
-    subjectElement.setCustomValidity('');
-    messageElement.setCustomValidity('');
 }
 
 function showAlertMessage() {
@@ -101,42 +108,67 @@ function showAlertMessage() {
             </div>
         </div>
         <div class="form-title-underline"></div>
-        <form method="POST" class="form" ref="form" @submit.prevent="validateForm()">
+        <form method="POST" class="form" ref="form">
             <div class="input-row">
                 <div>
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" v-model="formData.name" required>
+                    <label for="name"><p>*</p>Name</label>
+                    <input type="text" id="name" name="name" required>
                     <FontAwesomeIcon class="error-icon" :icon="faExclamationTriangle" />
+                    <div class="error-msg">
+                        <p v-if="name.msg" class="error-text">
+                            {{ name.msg }}
+                        </p>
+                    </div>
                 </div>
                 <div>
-                    <label for="email">Email</label>
+                    <label for="email"><p>*</p>Email</label>
                     <input type="email" id="email" name="email" required>
                     <FontAwesomeIcon class="error-icon" :icon="faExclamationTriangle" />
+                    <div class="error-msg">
+                        <p v-if="email.msg" class="error-text">
+                            {{ email.msg }}
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="input-row">
                 <div>
-                    <label for="phone">Phone</label>
+                    <label for="phone"><p>*</p>Phone</label>
                     <input type="tel" id="phone" name="phone" required>
                     <FontAwesomeIcon class="error-icon" :icon="faExclamationTriangle" />
+                    <div class="error-msg">
+                        <p v-if="phone.msg" class="error-text">
+                            {{ phone.msg }}
+                        </p>
+                    </div>
                 </div>
                 <div>
-                    <label for="subject">Subject</label>
+                    <label for="subject"><p>*</p>Subject</label>
                     <input type="text" id="subject" name="subject" required>
                     <FontAwesomeIcon class="error-icon" :icon="faExclamationTriangle" />
+                    <div class="error-msg">
+                        <p v-if="subject.msg" class="error-text">
+                            {{ subject.msg }}
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="input-row">
                 <div>
-                    <label for="message">Message</label>
+                    <label for="message"><p>*</p>Message</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                     <FontAwesomeIcon class="message-error-icon" :icon="faExclamationTriangle" />
+                    <div class="error-msg">
+                        <p v-if="message.msg" class="error-text">
+                            {{ message.msg }}
+                        </p>
+                    </div>
                 </div>
             </div>
 
             <div class="form-footer">
                 <div class="submit-container">
-                    <input type="submit" value="Send">
+                    <input type="submit" value="Send" @click="validateForm()">
                     <span class="icon-container">
                         <FontAwesomeIcon :icon="faArrowRight" class="pr-icon-arrow" />
                     </span>
@@ -146,16 +178,16 @@ function showAlertMessage() {
                         915-4272</a>
                 </div>
             </div>
-            <div class="error-msg">
-                <p v-for="msg in errorMsgs" :key="msg" class="error-text">
-                    {{ msg }}
-                </p>
-            </div>
         </form>
     </div>
 </template>
 
 <style scoped>
+
+.pr-main-content {
+    background-color: var(--color-light-gray-100);
+}
+
 .overlap-box {
     position: relative;
     top: -40px;
@@ -196,9 +228,15 @@ label {
     text-align: start;
 }
 
+label p {
+    color: red;
+    padding-right: 5px;
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 input,
 textarea {
-    margin-bottom: 1em;
     padding: 0.5em;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -271,6 +309,7 @@ input[type="submit"] {
 .error-msg {
     color: #cc0000;
     margin-right: auto;
+    margin-bottom: 1em;
 }
 
 .error-text {
