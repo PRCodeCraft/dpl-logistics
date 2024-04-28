@@ -59,9 +59,9 @@ function validateForm() {
     subjectElement.setCustomValidity('');
     messageElement.setCustomValidity('');
 
-    nameElement.setCustomValidity(nameElement.checkValidity() ? '' : 'Please enter your name');
-    emailElement.setCustomValidity(emailElement.checkValidity() ? '' : 'Please enter your email');
-    phoneElement.setCustomValidity(phoneElement.checkValidity() ? '' : 'Please enter your phone number');
+    nameElement.setCustomValidity(nameElement.checkValidity() ? '' : 'Please enter your name'); 
+    emailElement.setCustomValidity(emailElement.checkValidity() ? '' : !emailElement.value ? 'Please enter your email' : 'Please enter a valid email');
+    phoneElement.setCustomValidity(phoneElement.checkValidity() ? '' : !phoneElement.value ? 'Please enter your phone number' : 'Please enter a valid phone number');
     subjectElement.setCustomValidity(subjectElement.checkValidity() ? '' : 'Please enter your subject');
     messageElement.setCustomValidity(messageElement.checkValidity() ? '' : 'Please enter your message');
 
@@ -79,8 +79,10 @@ function validateForm() {
             errorMsgs.value.push(element.validationMessage);
             element.setCustomValidity(' ')
             errorIcon.classList.add('show-error-icon');
+            element.classList.add('input-error');
         } else {
             errorIcon.classList.remove('show-error-icon');
+            element.classList.remove('input-error');
         }        
     }
 
@@ -330,6 +332,14 @@ input[type="submit"] {
     font-size: 1.2em;
     margin-left: -30px;
     margin-bottom: 72px;
+}
+
+.input-error {
+    border-color: #cc0000;
+}
+
+.input-error:focus {
+    outline-color: #cc0000;
 }
 
 .show-error-icon {
