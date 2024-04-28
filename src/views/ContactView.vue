@@ -77,6 +77,7 @@ function validateForm() {
 
         if (!element.checkValidity()) {
             errorMsgs.value.push(element.validationMessage);
+            element.setCustomValidity(' ')
             errorIcon.classList.add('show-error-icon');
         } else {
             errorIcon.classList.remove('show-error-icon');
@@ -167,8 +168,8 @@ function showAlertMessage() {
             </div>
 
             <div class="form-footer">
-                <div class="submit-container">
-                    <input type="submit" value="Send" @click="validateForm()">
+                <div class="submit-container" @click="validateForm()">
+                    <input type="submit" value="Send">
                     <span class="icon-container">
                         <FontAwesomeIcon :icon="faArrowRight" class="pr-icon-arrow" />
                     </span>
