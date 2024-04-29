@@ -6,7 +6,7 @@ import VFooter from './components/VFooter.vue';
 <template>
   <main>
     <VNavBar/>
-    <div>
+    <div class="pr-main-content">
       <!-- No funciona bien el transition -->
       <!-- <Transition name="slide" mode="out-in">
         <component :is="Component"></component>
@@ -40,4 +40,7 @@ import VFooter from './components/VFooter.vue';
   transform: translateX(0);
 }
 
+.pr-main-content {
+  background-color: var(--color-light-gray-100);
+}
 </style>
