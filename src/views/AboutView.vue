@@ -4,16 +4,37 @@
     <div class="background-about">
       <div class="overlap-box">
         <div class="px-24 py-12">
-          <span class="pr-about-title-1 text-2xl font-bold text-gray-800">Our </span
-          ><span class="pr-about-title-2 text-2xl font-bold text-blue-500">history</span>
+          <span class="pr-about-title-1 text-2xl font-bold text-gray-800">Our </span><span
+            class="pr-about-title-2 text-2xl font-bold text-blue-500">history</span>
         </div>
         <article>
-          Rooted in a robust history of hands-on experience within a distinguished freight company, my
-professional journey led me to establish our own venture during the challenging times of the
-COVID era. Our company's inception was fueled by a strategic vision to reshape conventional
-approaches and infuse a new dimension of value into the logistics landscape. The decision to
-launch our company during such unprecedented times was not just a response to challenges but
-a testament to our unwavering belief in the transformative power of expertise.
+          <p>
+            Rooted in a robust history of hands-on experience within a distinguished freight company, my
+            professional journey led me to establish our own venture during the challenging times of the
+            COVID era. Our company's inception was fueled by a strategic vision to reshape conventional
+            approaches and infuse a new dimension of value into the logistics landscape. The decision to
+            launch our company during such unprecedented times was not just a response to challenges but
+            a testament to our unwavering belief in the transformative power of expertise.
+          </p>
+          <div class="pr-article-quote">
+            Emphasizing value addition, my deep industry understanding
+            became our approach’s cornerstone.
+          </div>
+          <p>Amid global uncertainties, our commitment to excellence stood firm.</p>
+          <div class="pr-article-images">
+            <img src="../assets/hero_services.png" alt="" class="img-1">
+            <img src="../assets/hero_services.png" alt="" class="img-2">
+            <img src="../assets/hero_services.png" alt="" class="img-3">
+          </div>
+          <p>In conclusion, our venture's inception reflects our unwavering belief in expertise-driven
+            transformation and commitment to excellence. Rooted in industry insights, we aim to reshape
+            logistics with personalized, customer-centric solutions.</p>
+          <a href="/Contact">
+            <button >Request a quote</button>
+            <span class="icon-container">
+              <FontAwesomeIcon :icon="faArrowRight" class="pr-icon-arrow" />
+            </span>
+          </a>
         </article>
       </div>
     </div>
@@ -22,6 +43,8 @@ a testament to our unwavering belief in the transformative power of expertise.
 
 <script setup lang="ts">
 import VHeroBlock from '@/components/VHeroBlock.vue'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 </script>
 
 <style>
@@ -33,7 +56,7 @@ import VHeroBlock from '@/components/VHeroBlock.vue'
   position: relative;
   top: -40px;
   width: 70em;
-  height: 47em;
+  height: max-content;
   border-radius: 15px;
   margin: auto;
   background-color: var(--color-white);
@@ -63,10 +86,68 @@ import VHeroBlock from '@/components/VHeroBlock.vue'
 }
 
 article {
-  font-family: 'Mundial';
-  font-weight: 100;
+  padding: 0 6em 3em 6em;
+}
+
+article p {
   font-size: 18px;
-  color: var(--color-indigo-80);
-  padding: 0 6em;
+  color: var(--color-indigo-60);
+}
+
+.pr-article-quote {
+  font-family: 'Mundial';
+  font-weight: 600;
+  font-size: 26px;
+  padding-left: 1.2em;
+  margin: 2em 0;
+  border-left: solid 2px var(--color-light-blue);
+}
+
+.pr-article-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "img-1 img-1" "img-2 img-3";
+  gap: 1em;
+  margin: 3em 0;
+}
+
+.img-1 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  grid-area: img-1;
+}
+
+.img-2 {
+  height: 100%;
+  object-fit: cover;
+  grid-area: img-2;
+}
+
+.img-3 {
+  height: 100%;
+  object-fit: cover;
+  grid-area: img-3;
+}
+
+button {
+    padding: 0.5em 1em;
+    padding-left: 2em;
+    background-color: #1D2344;
+    font-family: AkiraExpandedDemo;
+    color: white;
+    border: none;
+    width: 20em;
+    text-align: left;
+    border-radius: 0px;
+    cursor: pointer;
+    margin: 2em 0;
+}
+
+.pr-icon-arrow {
+    transform: translate(-45px, 3px);
+    color: white;
+    font-size: 1.5em;
 }
 </style>
