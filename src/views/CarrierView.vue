@@ -40,7 +40,7 @@
             <div class="pr-carriers-title">Do you match our requirements?</div>
             <p class="pr-carriers-text">
               Fill out our file below and send it back to us at
-              <span class="pr-carriers-email">Sales@dpl-logistics.com</span>
+              <a href="mailto: sales@dpl-logistics.com" class="pr-carriers-email">Sales@dpl-logistics.com</a>
             </p>
             <div class="flex justify-center pt-8">
               <a
@@ -60,7 +60,7 @@
           <p class="pr-carriers-doubt">
             Feel free to contact us at
             <FontAwesomeIcon :icon="faPhone" class="ml-1 mr-1"></FontAwesomeIcon
-            ><span class="pr-carriers-phone">+1 303 915-4272</span>
+            ><a href="tel:+13039154272" class="pr-carriers-phone">+1 303 915-4272</a>
           </p>
         </div>
       </div>
@@ -178,6 +178,9 @@ import carrierPacket from '@/assets/files/carrierPacket.pdf'
   font-family: 'AkiraExpandedDemo';
   color: var(--color-indigo-100);
   font-size: 15px;
+}
+.py-12 {
+    padding-bottom: 2.1rem;
 }
 @media (max-width: 1130px) {
   .pr-background-image-hero {
