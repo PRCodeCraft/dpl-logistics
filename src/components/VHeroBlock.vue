@@ -50,7 +50,7 @@ const props = defineProps({
 <style>
 .pr-background-image-hero {
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   background-attachment: fixed;
 }
 
