@@ -42,7 +42,7 @@
             @click="nextCards"
           />
         </div>
-        <div class="flex justify-center pt-16">
+        <div class="flex justify-center pt-8">
           <router-link
             to="/Contact"
             class="inline-flex items-center justify-center px-5 py-3 pr-btn-request-quote"
@@ -87,7 +87,7 @@ const cards = ref([
   {
     title: 'Refrigerated',
     description:
-      'A refrigerated truck, or reefer truck, transports perishable goods at controlled temperatures. Equipped with a refrigeration system, it ensures safe delivery of items like food and pharmaceuticals. Reefer trucks serve crucial roles in food distribution, pharmaceuticals, and floral transportation',
+      'A refrigerated truck, or reefer truck, transports perishable goods at controlled temperatures. Equipped with a refrigeration system, it ensures safe delivery of items. Reefer trucks serve crucial roles in food distribution, pharmaceuticals, and floral transportation',
     image: 'refrigerated.png'
   },
   {
