@@ -24,7 +24,7 @@
             <template v-for="(card, index) in displayedCards" :key="index">
               <div class="pr-8 pr-single-card" :class="{ animate: isAnimating }">
                 <img
-                  :src="`./src/assets/services/${card.image}`"
+                  :src="`src/assets/services/${card.image}`"
                   :alt="card.title"
                   class="pr-img-services"
                 />
