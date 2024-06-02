@@ -1,25 +1,11 @@
-<script>
+<script setup>
+import { ref } from 'vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
-export default {
-  components: {
-    FontAwesomeIcon
-  },
-  data() {
-    return {
-      currentYear: new Date().getFullYear()
-    }
-  },
-  computed: {
-    faEnvelope() {
-      return faEnvelope
-    },
-    faPhone() {
-      return faPhone
-    }
-  }
-}
+
+const currentYear = ref(new Date().getFullYear())
 </script>
+
 <template>
   <footer class="pr-background-footer shadow">
     <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">

@@ -107,8 +107,6 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
       >
     </div>
   </div>
-  <!-- Mountain section  -->
-  <VMountain />
   <!-- Truck icons section  -->
   <div class="pr-background-truck-icons">
     <div class="flex justify-center mb-16 pr-title-choose-us pt-24">Services offered</div>
@@ -170,6 +168,13 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
           Prioritized, expedited shipping for urge deliveries
         </div>
       </div>
+      <div class="pr-truck-icon-even">
+        <div class="pr-truck-icon-max-width">
+          <img src="../assets/iconTrucks/truck-icon.png" alt="heavy haul truck icon" width="180" />
+        </div>
+        <div class="pr-title-truck-icon">Heavy haul</div>
+        <div class="pr-description-truck-icon">Lorem ipsum dolor sit amet</div>
+      </div>
     </div>
     <div class="flex justify-center pt-16 pb-24">
       <router-link
@@ -179,6 +184,8 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
       >
     </div>
   </div>
+    <!-- Mountain section  -->
+    <VMountain />
   <!-- Dakota image section  -->
   <div class="pr-background-image-dakota">
     <div class="pr-img-container-dakota pt-24 pb-3">

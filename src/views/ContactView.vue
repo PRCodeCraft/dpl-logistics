@@ -59,7 +59,7 @@ function validateForm() {
     subjectElement.setCustomValidity('');
     messageElement.setCustomValidity('');
 
-    nameElement.setCustomValidity(nameElement.checkValidity() ? '' : 'Please enter your name'); 
+    nameElement.setCustomValidity(nameElement.checkValidity() ? '' : 'Please enter your name');
     emailElement.setCustomValidity(emailElement.checkValidity() ? '' : !emailElement.value ? 'Please enter your email' : 'Please enter a valid email');
     phoneElement.setCustomValidity(phoneElement.checkValidity() ? '' : !phoneElement.value ? 'Please enter your phone number' : 'Please enter a valid phone number');
     subjectElement.setCustomValidity(subjectElement.checkValidity() ? '' : 'Please enter your subject');
@@ -83,7 +83,7 @@ function validateForm() {
         } else {
             errorIcon.classList.remove('show-error-icon');
             element.classList.remove('input-error');
-        }        
+        }
     }
 
     if (form.value?.checkValidity()) {
@@ -94,8 +94,8 @@ function validateForm() {
 }
 
 function showAlertMessage() {
-    Swal.fire({title: 'Email sent successfully!', text: 'You will be contacted soon.', icon: "success"}).then(() => {
-        window.location.href='.';
+    Swal.fire({ title: 'Email sent successfully!', text: 'You will be contacted soon.', icon: "success" }).then(() => {
+        window.location.href = '.';
     });
 }
 
@@ -104,17 +104,17 @@ function showAlertMessage() {
 <template style="background-color: red;">
     <VHeroBlock imageUrl="./src/assets/hero_contact.png" title="Contact Us" />
     <div class="overlap-box">
-        <div class="form-title">
-            <p>Request </p>
-            <div class="form-title-quote">
-                <p>a quote</p>
-            </div>
+        <div class="px-24 py-12">
+            <span class="pr-contact-title-1 text-2xl font-bold text-gray-800">Request </span><span
+                class="pr-contact-title-2 text-2xl font-bold text-blue-500">a quote</span>
         </div>
         <div class="form-title-underline"></div>
         <form method="POST" class="form" ref="form">
             <div class="input-row">
                 <div>
-                    <label for="name"><p>*</p>Name</label>
+                    <label for="name">
+                        <p>*</p>Name
+                    </label>
                     <input type="text" id="name" name="name" required>
                     <FontAwesomeIcon class="error-icon" :icon="faExclamationTriangle" />
                     <div class="error-msg">
@@ -124,7 +124,9 @@ function showAlertMessage() {
                     </div>
                 </div>
                 <div>
-                    <label for="email"><p>*</p>Email</label>
+                    <label for="email">
+                        <p>*</p>Email
+                    </label>
                     <input type="email" id="email" name="email" required>
                     <FontAwesomeIcon class="error-icon" :icon="faExclamationTriangle" />
                     <div class="error-msg">
@@ -136,7 +138,9 @@ function showAlertMessage() {
             </div>
             <div class="input-row">
                 <div>
-                    <label for="phone"><p>*</p>Phone</label>
+                    <label for="phone">
+                        <p>*</p>Phone
+                    </label>
                     <input type="tel" id="phone" name="phone" required>
                     <FontAwesomeIcon class="error-icon" :icon="faExclamationTriangle" />
                     <div class="error-msg">
@@ -146,7 +150,9 @@ function showAlertMessage() {
                     </div>
                 </div>
                 <div>
-                    <label for="subject"><p>*</p>Subject</label>
+                    <label for="subject">
+                        <p>*</p>Subject
+                    </label>
                     <input type="text" id="subject" name="subject" required>
                     <FontAwesomeIcon class="error-icon" :icon="faExclamationTriangle" />
                     <div class="error-msg">
@@ -158,7 +164,9 @@ function showAlertMessage() {
             </div>
             <div class="input-row">
                 <div>
-                    <label for="message"><p>*</p>Message</label>
+                    <label for="message">
+                        <p>*</p>Message
+                    </label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                     <FontAwesomeIcon class="message-error-icon" :icon="faExclamationTriangle" />
                     <div class="error-msg">
@@ -186,7 +194,6 @@ function showAlertMessage() {
 </template>
 
 <style scoped>
-
 .pr-main-content {
     background-color: var(--color-light-gray-100);
 }
@@ -194,7 +201,7 @@ function showAlertMessage() {
 .overlap-box {
     position: relative;
     top: -40px;
-    width: 70%;
+    width: 70em;
     height: max-content;
     border-radius: 15px;
     margin: auto;
@@ -207,9 +214,9 @@ function showAlertMessage() {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10em;
-    padding-top: 3em;
-    padding-bottom: 2em;
+    padding: 6em;
+    padding-top: 0;
+    padding-bottom: 3em;
     color: gray;
 }
 
@@ -281,34 +288,24 @@ input[type="submit"] {
     color: rgb(82, 81, 81);
 }
 
-.form-title {
-    font-family: AkiraExpandedDemo;
-    color: var(--color-indigo-100);
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
-    margin-left: 10em;
-    padding-top: 4em;
-    width: max-content;
+.pr-contact-title-1 {
+  font-family: 'AkiraExpandedDemo';
+  font-size: 25px;
+  color: var(--color-indigo-100);
 }
-
-.form-title p {
-    margin: 0;
-    font-size: 25px;
+.pr-contact-title-1:after {
+  content: '';
+  position: absolute;
+  width: 7%;
+  left: 6rem;
+  padding-top: 40px;
+  border-bottom: 2px solid var(--color-light-blue-lighter);
 }
-
-.form-title-underline {
-    border-bottom: 3px solid var(--color-light-blue);
-    margin-left: 10em;
-    margin-top: 1em;
-    width: 4%;
+.pr-contact-title-2 {
+  font-family: 'AkiraExpandedDemo';
+  font-size: 25px;
+  color: var(--color-light-blue);
 }
-
-.form-title-quote {
-    font-family: AkiraExpandedDemo;
-    color: var(--color-light-blue);
-}
-
 .error-msg {
     color: #cc0000;
     margin-right: auto;
@@ -326,6 +323,7 @@ input[type="submit"] {
     margin-left: -30px;
     margin-bottom: -1px;
 }
+
 .message-error-icon {
     display: none;
     color: #cc0000;
