@@ -22,15 +22,15 @@
           </div>
           <p>Amid global uncertainties, our commitment to excellence stood firm.</p>
           <div class="pr-article-images">
-            <img src="../assets/hero_services.png" alt="" class="img-1">
-            <img src="../assets/hero_services.png" alt="" class="img-2">
-            <img src="../assets/hero_services.png" alt="" class="img-3">
+            <img src="../assets/office_image_1.jpg" alt="" class="img-1">
+            <img src="../assets/office_image_2.jpg" alt="" class="img-2">
+            <img src="../assets/office_image_3.jpg" alt="" class="img-3">
           </div>
           <p>In conclusion, our venture's inception reflects our unwavering belief in expertise-driven
             transformation and commitment to excellence. Rooted in industry insights, we aim to reshape
             logistics with personalized, customer-centric solutions.</p>
-          <a href="/Contact">
-            <button >Request a quote</button>
+          <a href="/Contact" class="contact-button">
+            <button>Request a quote</button>
             <span class="icon-container">
               <FontAwesomeIcon :icon="faArrowRight" class="pr-icon-arrow" />
             </span>
@@ -114,9 +114,10 @@ article p {
 
 .img-1 {
   width: 100%;
-  height: auto;
+  height: 25em;
   object-fit: cover;
   grid-area: img-1;
+  object-position: bottom;
 }
 
 .img-2 {
@@ -132,22 +133,124 @@ article p {
 }
 
 button {
-    padding: 0.5em 1em;
-    padding-left: 2em;
-    background-color: #1D2344;
-    font-family: AkiraExpandedDemo;
-    color: white;
-    border: none;
-    width: 20em;
-    text-align: left;
-    border-radius: 0px;
-    cursor: pointer;
-    margin: 2em 0;
+  padding: 0.5em 1em;
+  padding-left: 2em;
+  background-color: #1D2344;
+  font-family: AkiraExpandedDemo;
+  color: white;
+  border: none;
+  width: 20em;
+  text-align: left;
+  border-radius: 0px;
+  cursor: pointer;
+  margin: 2em 0;
+}
+
+.contact-button {
+  display: flex;
 }
 
 .pr-icon-arrow {
-    transform: translate(-45px, 3px);
-    color: white;
-    font-size: 1.5em;
+  transform: translate(-45px, 37px);
+  color: white;
+  font-size: 1.5em;
+}
+
+@media (max-width: 1130px) {
+  .overlap-box {
+    width: 55em;
+  }
+
+  .pr-article-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "img-1" "img-2" "img-3";
+    gap: 1em;
+    margin: 3em 0;
+  }
+
+  .pr-article-images img {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .contact-button button {
+    display: flex;
+    width: 20em;
+  }
+
+}
+
+@media (max-width: 900px) {
+  .overlap-box {
+    width: 38em;
+    height: 140em;
+  }
+
+  .pr-article-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "img-1" "img-2" "img-3";
+    gap: 1em;
+    margin: 3em 0;
+  }
+
+  .pr-article-images img {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 550px) {
+  .overlap-box {
+    width: 28em;
+    height: 145em
+  }
+
+  .pr-article-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "img-1" "img-2" "img-3";
+    gap: 1em;
+    margin: 3em 0;
+  }
+
+  .pr-article-images img {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .contact-button {
+    display: flex;
+    text-align: center;
+  }
+
+  .pr-icon-arrow {
+    display: none;
+}
+
+  .pr-article-quote {
+    font-size: 20px;
+    padding-left: 1em
+  }
+  .pr-about-title-1:after {
+    border-bottom: 0px solid var(--color-light-blue-lighter);
+  }
+}
+
+@media (max-width: 370px) {
+  .overlap-box {
+    width: 20em;
+    height: 210em;
+  }
+  .pr-about-title-1:after {
+    border-bottom: 0px solid var(--color-light-blue-lighter);
+  }
 }
 </style>
