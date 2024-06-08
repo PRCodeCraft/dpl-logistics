@@ -191,9 +191,6 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
     <div class="pr-img-container-dakota pt-24 pb-3">
       <img src="../assets/Dakota.png" alt="vp logistic owner" width="620" height="620" class="pr-img-dakota" />
     </div>
-    <div class="flex justify-center pb-24 pr-vp-text">
-      Dakota Wendel, VP Logistics
-    </div>
   </div>
 </template>
 
