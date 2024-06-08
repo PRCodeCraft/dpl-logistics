@@ -241,7 +241,7 @@ button {
   }
 
   .pr-hero-about-position {
-    background-position-x: -550px;
+    background-position-x: -750px;
   }
 
   .pr-article-images {
