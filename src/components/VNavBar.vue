@@ -1,6 +1,5 @@
 <script lang="ts">
 import { ref } from 'vue';
-let navbarItemArray = ['home', 'about', 'contact', 'services', 'carriers']
 export default {
   setup() {
     let showMenu = ref(false)
@@ -8,21 +7,16 @@ export default {
     return { showMenu, toggleNav }
   },
   methods: {
-    updateNavBarItem(item: any) {
-      document.querySelectorAll('.pr-navbar-item-active').forEach((e) => {
-        e.classList?.remove('pr-navbar-item-active')
-      })
-      navbarItemArray.forEach((e) => {
-        if (e === item) {
-          document.getElementById(item)?.classList.add('pr-navbar-item-active')
-        }
-      })
+    pageClass(current: string) {
+      // Access the current route using this.$route.path
+      const path = this.$route.path;
+      // Determine the class based on the path
+      if (path === current) {
+        return 'pr-navbar-item-active';
+      } else {
+        return '';
+      }
     }
-  },
-  created() {
-    setTimeout(() => {
-      this.updateNavBarItem('home')
-    }, 200);
   }
 }
 </script>
@@ -35,7 +29,7 @@ export default {
           ><img src="../assets/dpllogo.png" alt="dpl logo" width="100" height="100" class="mt-3 mb-3">
         </router-link>
         <!-- Mobile menu button -->
-        <div @click="toggleNav" class="flex md:hidden">
+        <div @click="toggleNav" class="flex md:hidden w-16">
           <button
             type="button"
             class="text-gray-100 hover:text-gray-400 focus:outline-none focus:text-gray-400"
@@ -55,20 +49,20 @@ export default {
         :class="showMenu ? 'flex' : 'hidden'"
         class="flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0"
       >
-        <li class="text-gray-100 pr-navbar-item relative" @click="updateNavBarItem('home')">
-          <router-link to="/" id="home">Home</router-link>
+        <li class="text-gray-100 pr-navbar-item relative">
+          <router-link to="/" id="home" :class="pageClass('/')">Home</router-link>
         </li>
-        <li class="text-gray-100 pr-navbar-item relative" @click="updateNavBarItem('about')">
-          <router-link to="/About" id="about">About us</router-link>
+        <li class="text-gray-100 pr-navbar-item relative">
+          <router-link to="/About" id="about" :class="pageClass('/About')">About us</router-link>
         </li>
-        <li class="text-gray-100 pr-navbar-item relative" @click="updateNavBarItem('contact')">
-          <router-link to="/Contact" id="contact">Contact us</router-link>
+        <li class="text-gray-100 pr-navbar-item relative">
+          <router-link to="/Contact" id="contact" :class="pageClass('/Contact')">Contact us</router-link>
         </li>
-        <li class="text-gray-100 pr-navbar-item relative" @click="updateNavBarItem('services')">
-          <router-link to="/Services" id="services">Services</router-link>
+        <li class="text-gray-100 pr-navbar-item relative">
+          <router-link to="/Services" id="services" :class="pageClass('/Services')">Services</router-link>
         </li>
-        <li class="text-gray-100 pr-navbar-item relative" @click="updateNavBarItem('carriers')">
-          <router-link to="/Carriers" id="carriers">Carriers</router-link>
+        <li class="text-gray-100 pr-navbar-item relative">
+          <router-link to="/Carriers" id="carriers" :class="pageClass('/Carriers')">Carriers</router-link>
         </li>
       </ul>
     </nav>

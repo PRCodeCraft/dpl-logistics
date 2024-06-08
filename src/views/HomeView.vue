@@ -12,7 +12,7 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
     title="DPL LOGISTICS"
     description="We deliver superior truckload services, exceeding client expectations"
     buttonText="Contact Us"
-    buttonRouteName="/contact" />
+    buttonRouteName="/Contact" />
   <!-- Mision & Vision section  -->
   <div class="pr-background-brand py-36 px-20">
     <div class="pr-background-white">
