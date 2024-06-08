@@ -184,14 +184,14 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
       >
     </div>
   </div>
+        <!-- Mountain section  -->
+        <VMountain />
   <!-- Dakota image section  -->
   <div class="pr-background-image-dakota">
     <div class="pr-img-container-dakota pt-24 pb-24">
       <img src="../assets/Dakota.png" alt="vp logistic owner" width="620" height="620" class="pr-img-dakota" />
     </div>
   </div>
-      <!-- Mountain section  -->
-      <VMountain />
 </template>
 
 <style>

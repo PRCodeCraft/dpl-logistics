@@ -56,13 +56,13 @@ export default {
           <router-link to="/About" id="about" :class="pageClass('/About')">About us</router-link>
         </li>
         <li class="text-gray-100 pr-navbar-item relative">
-          <router-link to="/Contact" id="contact" :class="pageClass('/Contact')">Contact us</router-link>
-        </li>
-        <li class="text-gray-100 pr-navbar-item relative">
           <router-link to="/Services" id="services" :class="pageClass('/Services')">Services</router-link>
         </li>
         <li class="text-gray-100 pr-navbar-item relative">
           <router-link to="/Carriers" id="carriers" :class="pageClass('/Carriers')">Carriers</router-link>
+        </li>
+        <li class="text-gray-100 pr-navbar-item relative">
+          <router-link to="/Contact" id="contact" :class="pageClass('/Contact')">Contact us</router-link>
         </li>
       </ul>
     </nav>
@@ -103,5 +103,14 @@ export default {
     width: calc(100% - 0.5rem);
     bottom: -2px;
     left: 0.25rem;
+}
+
+.button {
+  margin: 0;
+}
+
+.py-1 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 </style>
