@@ -105,8 +105,8 @@ export default {
     left: 0.25rem;
 }
 
-.button {
-  margin: 0;
+button {
+  margin: 0 0 !important;
 }
 
 .py-1 {
