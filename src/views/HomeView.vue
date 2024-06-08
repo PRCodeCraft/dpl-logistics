@@ -173,7 +173,7 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
           <img src="../assets/iconTrucks/truck-icon.png" alt="heavy haul truck icon" width="180" />
         </div>
         <div class="pr-title-truck-icon">Heavy haul</div>
-        <div class="pr-description-truck-icon">Lorem ipsum dolor sit amet</div>
+        <div class="pr-description-truck-icon">Loads that weight more than 80,000 lbs, gross weight or require permits to move</div>
       </div>
     </div>
     <div class="flex justify-center pt-16 pb-24">

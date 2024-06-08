@@ -19,7 +19,7 @@
   position: relative;
   z-index: 0;
   width: 100%;
-  min-height: 30vh;
+  min-height: 35vh;
 }
 
 .pr-logo-between-img {
