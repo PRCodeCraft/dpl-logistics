@@ -436,6 +436,11 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
   .p-12 {
     padding-top: 1rem;
   }
+
+  .py-36 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
 }
 
 @media (max-width: 1050px) {
