@@ -292,6 +292,7 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 .pr-title-choose-us {
