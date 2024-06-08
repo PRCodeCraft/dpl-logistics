@@ -12,7 +12,7 @@
           ><span class="pr-about-title-2 text-2xl font-bold text-blue-500">history</span>
         </div>
         <article>
-          <p>
+          <p class="pr-article-font">
             Rooted in a robust history of hands-on experience within a distinguished freight
             company, my professional journey led me to establish our own venture during the
             challenging times of the COVID era. Our company's inception was fueled by a strategic
@@ -25,22 +25,26 @@
             Emphasizing value addition, my deep industry understanding became our approach to our
             cornerstone.
           </div>
-          <p>Amid global uncertainties, our commitment to excellence stood firm.</p>
+          <p class="pr-article-font">
+            Amid global uncertainties, our commitment to excellence stood firm.
+          </p>
           <div class="pr-article-images">
             <img src="../assets/office_image_1.jpg" alt="" class="img-1" />
             <img src="../assets/office_image_2.jpg" alt="" class="img-2" />
             <img src="../assets/office_image_3.jpg" alt="" class="img-3" />
           </div>
-          <p>
+          <p class="pr-article-font pb-8">
             In conclusion, our venture's inception reflects our unwavering belief in
             expertise-driven transformation and commitment to excellence. Rooted in industry
-            insights, we aim to reshape logistics with personalized, customer-centric solutions.
+            insights, we aim to reshape logistics with personalized, customer centric solutions.
           </p>
           <a href="/Contact" class="contact-button">
-            <button>Request a quote</button>
-            <span class="icon-container">
-              <FontAwesomeIcon :icon="faArrowRight" class="pr-icon-arrow" />
-            </span>
+            <button class="flex justify-around">
+              
+                <div>Request a quote</div>
+                <FontAwesomeIcon :icon="faArrowRight" class="pr-icon-arrow" />
+           
+            </button>
           </a>
         </article>
       </div>
@@ -72,6 +76,10 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
   background-color: var(--color-white);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 2;
+}
+
+.pr-article-font {
+  font-family: Mundial;
 }
 
 .pr-about-title-1 {
@@ -144,7 +152,6 @@ article p {
 
 button {
   padding: 1em;
-  padding-left: 2em;
   background-color: #1d2344;
   font-family: AkiraExpandedDemo;
   color: white;
@@ -161,10 +168,8 @@ button {
 }
 
 .pr-icon-arrow {
-  transform: translate(-45px, 37px);
   color: white;
   font-size: 1.5em;
-  padding-top: 0.35em;
 }
 
 @media (max-width: 1130px) {
@@ -236,7 +241,7 @@ button {
   }
 
   .pr-hero-about-position {
-    background-position-x: -750px;
+    background-position-x: -550px;
   }
 
   .pr-article-images {

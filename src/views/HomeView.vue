@@ -302,7 +302,7 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
 .pr-title-choose-us:after {
   content: '';
   position: absolute;
-  width: 5%;
+  width: 10%;
   padding-top: 40px;
   border-bottom: 2px solid var(--color-light-blue-lighter);
 }
@@ -521,6 +521,10 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
   .pr-btn-request-quote {
     font-size: 10px;
   }
+
+  .pr-title-choose-us:after {
+    width: 15%;
+  }
 }
 
 @media (max-width: 625px) {
@@ -579,6 +583,10 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
 
   .pr-text-btn-freight {
     padding-left: 1rem;
+  }
+
+  .pr-title-choose-us:after {
+    width: 20%;
   }
 }
 
