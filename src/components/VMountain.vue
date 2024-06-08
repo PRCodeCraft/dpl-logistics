@@ -19,8 +19,7 @@
   position: relative;
   z-index: 0;
   width: 100%;
-  height: 100%;
-  min-height: 100vh;
+  min-height: 30vh;
 }
 
 .pr-logo-between-img {
@@ -38,57 +37,42 @@
 }
 
 .pr-img-mountains {
-  position: relative;
-  margin-top: -6rem;
+  position: absolute;
+  bottom: 0;
   z-index: 2;
   width: 100%;
-  height: 100%;
+  height: 50%;
   -webkit-filter: drop-shadow(5px 5px 5px #666666);
   filter: drop-shadow(5px 5px 5px #666666);
 }
 
 @media (max-width: 1430px) {
   .pr-logo-between-img {
-    background-size: 450px;
+    background-size: 350px;
   }
 }
 
 @media (max-width: 900px) {
   .pr-logo-between-img {
-    background-size: 350px;
+    background-size: 250px;
   }
 }
 
 @media (max-width: 767px) {
   .pr-logo-between-img {
-    background-size: 250px;
-  }
-  .pr-img-mountains {
-    margin-top: -5rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .pr-img-mountains {
-    margin-top: -3rem;
+    background-size: 150px;
   }
 }
 
 @media (max-width: 500px) {
   .pr-logo-between-img {
-    background-size: 200px;
-  }
-  .pr-img-mountains {
-    margin-top: -1rem;
+    background-size: 100px;
   }
 }
 
 @media (max-width: 365px) {
   .pr-logo-between-img {
-    background-size: 170px;
-  }
-  .pr-img-mountains {
-    margin-top: 0rem;
+    background-size: 80px;
   }
 }
 </style>
