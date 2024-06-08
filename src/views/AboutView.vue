@@ -1,34 +1,41 @@
 <template>
   <div class="about">
-    <VHeroBlock imageUrl="./src/assets/hero_services.png" title="About Us" />
+    <VHeroBlock
+      imageUrl="./src/assets/hero_about.png"
+      title="About Us"
+      optionalClass="pr-hero-about-position"
+    />
     <div class="background-about">
       <div class="overlap-box">
         <div class="px-24 py-12">
-          <span class="pr-about-title-1 text-2xl font-bold text-gray-800">Our </span><span
-            class="pr-about-title-2 text-2xl font-bold text-blue-500">history</span>
+          <span class="pr-about-title-1 text-2xl font-bold text-gray-800">Our </span
+          ><span class="pr-about-title-2 text-2xl font-bold text-blue-500">history</span>
         </div>
         <article>
           <p>
-            Rooted in a robust history of hands-on experience within a distinguished freight company, my
-            professional journey led me to establish our own venture during the challenging times of the
-            COVID era. Our company's inception was fueled by a strategic vision to reshape conventional
-            approaches and infuse a new dimension of value into the logistics landscape. The decision to
-            launch our company during such unprecedented times was not just a response to challenges but
-            a testament to our unwavering belief in the transformative power of expertise.
+            Rooted in a robust history of hands-on experience within a distinguished freight
+            company, my professional journey led me to establish our own venture during the
+            challenging times of the COVID era. Our company's inception was fueled by a strategic
+            vision to reshape conventional approaches and infuse a new dimension of value into the
+            logistics landscape. The decision to launch our company during such unprecedented times
+            was not just a response to challenges but a testament to our unwavering belief in the
+            transformative power of expertise.
           </p>
           <div class="pr-article-quote">
-            Emphasizing value addition, my deep industry understanding
-            became our approach’s cornerstone.
+            Emphasizing value addition, my deep industry understanding became our approach’s
+            cornerstone.
           </div>
           <p>Amid global uncertainties, our commitment to excellence stood firm.</p>
           <div class="pr-article-images">
-            <img src="../assets/office_image_1.jpg" alt="" class="img-1">
-            <img src="../assets/office_image_2.jpg" alt="" class="img-2">
-            <img src="../assets/office_image_3.jpg" alt="" class="img-3">
+            <img src="../assets/office_image_1.jpg" alt="" class="img-1" />
+            <img src="../assets/office_image_2.jpg" alt="" class="img-2" />
+            <img src="../assets/office_image_3.jpg" alt="" class="img-3" />
           </div>
-          <p>In conclusion, our venture's inception reflects our unwavering belief in expertise-driven
-            transformation and commitment to excellence. Rooted in industry insights, we aim to reshape
-            logistics with personalized, customer-centric solutions.</p>
+          <p>
+            In conclusion, our venture's inception reflects our unwavering belief in
+            expertise-driven transformation and commitment to excellence. Rooted in industry
+            insights, we aim to reshape logistics with personalized, customer-centric solutions.
+          </p>
           <a href="/Contact" class="contact-button">
             <button>Request a quote</button>
             <span class="icon-container">
@@ -48,6 +55,9 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 </script>
 
 <style>
+.pr-hero-about-position {
+  background-position-y: -15rem;
+}
 .background-about {
   background-color: var(--color-light-gray-100);
 }
@@ -107,7 +117,7 @@ article p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: "img-1 img-1" "img-2 img-3";
+  grid-template-areas: 'img-1 img-1' 'img-2 img-3';
   gap: 1em;
   margin: 3em 0;
 }
@@ -133,9 +143,9 @@ article p {
 }
 
 button {
-  padding: 0.5em 1em;
+  padding: 1em;
   padding-left: 2em;
-  background-color: #1D2344;
+  background-color: #1d2344;
   font-family: AkiraExpandedDemo;
   color: white;
   border: none;
@@ -154,6 +164,7 @@ button {
   transform: translate(-45px, 37px);
   color: white;
   font-size: 1.5em;
+  padding-top: 0.35em;
 }
 
 @media (max-width: 1130px) {
@@ -165,7 +176,7 @@ button {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "img-1" "img-2" "img-3";
+    grid-template-areas: 'img-1' 'img-2' 'img-3';
     gap: 1em;
     margin: 3em 0;
   }
@@ -180,20 +191,33 @@ button {
     display: flex;
     width: 20em;
   }
-
 }
 
 @media (max-width: 900px) {
   .overlap-box {
     width: 38em;
-    height: 140em;
+    height: 145em;
+  }
+
+  article {
+    padding: 0 2em 3em 2em;
+  }
+
+  .px-24 {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .pr-about-title-1:after {
+    left: 2rem;
+    width: 10%;
   }
 
   .pr-article-images {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "img-1" "img-2" "img-3";
+    grid-template-areas: 'img-1' 'img-2' 'img-3';
     gap: 1em;
     margin: 3em 0;
   }
@@ -205,19 +229,23 @@ button {
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 620px) {
   .overlap-box {
     width: 28em;
-    height: 145em
+    height: 130em;
   }
 
   .pr-article-images {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "img-1" "img-2" "img-3";
+    grid-template-areas: 'img-1' 'img-2' 'img-3';
     gap: 1em;
     margin: 3em 0;
+  }
+
+  .pr-about-title-1:after {
+    width: 15%;
   }
 
   .pr-article-images img {
@@ -231,26 +259,53 @@ button {
     text-align: center;
   }
 
-  .pr-icon-arrow {
-    display: none;
-}
-
   .pr-article-quote {
     font-size: 20px;
-    padding-left: 1em
-  }
-  .pr-about-title-1:after {
-    border-bottom: 0px solid var(--color-light-blue-lighter);
+    padding-left: 1em;
   }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 445px) {
   .overlap-box {
     width: 20em;
-    height: 210em;
+    height: 140em;
   }
+
   .pr-about-title-1:after {
-    border-bottom: 0px solid var(--color-light-blue-lighter);
+    width: 20%;
+  }
+
+  .contact-button {
+    padding: 1rem;
+    font-size: 12px;
+  }
+
+  .contact-button button {
+    padding: 1rem;
+  }
+
+  .pr-icon-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 330px) {
+  .overlap-box {
+    width: 17em;
+    height: 155em;
+  }
+
+  .pr-about-title-1:after {
+    padding-top: 70px;
+  }
+
+  .contact-button {
+    padding: 1rem;
+    font-size: 10px;
+  }
+
+  .contact-button button {
+    padding: 1rem;
   }
 }
 </style>
