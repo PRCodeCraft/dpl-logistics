@@ -56,7 +56,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 <style>
 .pr-hero-about-position {
-  background-position-y: -15rem;
+  background-position-y: -17rem;
 }
 .background-about {
   background-color: var(--color-light-gray-100);
@@ -233,6 +233,10 @@ button {
   .overlap-box {
     width: 28em;
     height: 130em;
+  }
+
+  .pr-hero-about-position {
+    background-position-x: -950px;
   }
 
   .pr-article-images {
