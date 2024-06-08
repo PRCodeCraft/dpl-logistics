@@ -4,7 +4,10 @@ export default {
   setup() {
     let showMenu = ref(false)
     const toggleNav = () => (showMenu.value = !showMenu.value)
-    return { showMenu, toggleNav }
+    const closeMenu = () => {
+      showMenu.value = false;
+    };
+    return { showMenu, toggleNav, closeMenu }
   },
   methods: {
     pageClass(current: string) {
@@ -50,19 +53,19 @@ export default {
         class="flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0"
       >
         <li class="text-gray-100 pr-navbar-item relative">
-          <router-link to="/" id="home" :class="pageClass('/')">Home</router-link>
+          <router-link to="/" id="home" :class="pageClass('/')" @click="closeMenu">Home</router-link>
         </li>
         <li class="text-gray-100 pr-navbar-item relative">
-          <router-link to="/About" id="about" :class="pageClass('/About')">About us</router-link>
+          <router-link to="/About" id="about" :class="pageClass('/About')" @click="closeMenu">About us</router-link>
         </li>
         <li class="text-gray-100 pr-navbar-item relative">
-          <router-link to="/Services" id="services" :class="pageClass('/Services')">Services</router-link>
+          <router-link to="/Services" id="services" :class="pageClass('/Services')" @click="closeMenu">Services</router-link>
         </li>
         <li class="text-gray-100 pr-navbar-item relative">
-          <router-link to="/Carriers" id="carriers" :class="pageClass('/Carriers')">Carriers</router-link>
+          <router-link to="/Carriers" id="carriers" :class="pageClass('/Carriers')" @click="closeMenu">Carriers</router-link>
         </li>
         <li class="text-gray-100 pr-navbar-item relative">
-          <router-link to="/Contact" id="contact" :class="pageClass('/Contact')">Contact us</router-link>
+          <router-link to="/Contact" id="contact" :class="pageClass('/Contact')" @click="closeMenu">Contact us</router-link>
         </li>
       </ul>
     </nav>
