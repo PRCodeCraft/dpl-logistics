@@ -22,7 +22,7 @@
             transformative power of expertise.
           </p>
           <div class="pr-article-quote">
-            Emphasizing value addition, my deep industry understanding became our approach’s
+            Emphasizing value addition, my deep industry understanding became our approach
             cornerstone.
           </div>
           <p>Amid global uncertainties, our commitment to excellence stood firm.</p>
@@ -236,7 +236,7 @@ button {
   }
 
   .pr-hero-about-position {
-    background-position-x: -950px;
+    background-position-x: -750px;
   }
 
   .pr-article-images {
