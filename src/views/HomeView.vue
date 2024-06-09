@@ -10,7 +10,7 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
   <VHeroBlock
     imageUrl="./src/assets/hero_home.png"
     title="DPL LOGISTICS"
-    description="We deliver superior truckload services, exceeding client expectations"
+    description="We deliver customized freight and trucking solutions to meet your budget and delivery time needs"
     buttonText="Contact Us"
     buttonRouteName="/Contact" />
   <!-- Mision & Vision section  -->
@@ -126,6 +126,7 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
           />
         </div>
         <div class="pr-title-truck-icon">Flat Bed</div>
+        <div class="pr-description-truck-size">Size: 48 and 53 feet</div>
         <div class="pr-description-truck-icon">Versatile solutions for various cargo types</div>
       </div>
       <div class="pr-truck-icon-even">
@@ -133,6 +134,7 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
           <img src="../assets/iconTrucks/icons_dry_van.png" alt="dry van truck icon" width="180" />
         </div>
         <div class="pr-title-truck-icon">Dry Van</div>
+        <div class="pr-description-truck-size">Size: 53 feet</div>
         <div class="pr-description-truck-icon">Efficient transportation with enclosed storage</div>
       </div>
       <div class="pr-truck-icon-odd">
@@ -144,6 +146,7 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
           />
         </div>
         <div class="pr-title-truck-icon">Box Truck</div>
+        <div class="pr-description-truck-size">Size: 16, 24 and 26 feet</div>
         <div class="pr-description-truck-icon">
           Tailored for partial truck shipments when a full 53 dry van is not required
         </div>
@@ -153,6 +156,7 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
           <img src="../assets/iconTrucks/icons_hot_shot.png" alt="hotshot truck icon" width="180" />
         </div>
         <div class="pr-title-truck-icon">Hotshot</div>
+        <div class="pr-description-truck-size">Size: 20, 30 and 40 feet</div>
         <div class="pr-description-truck-icon">Swift and dedicated expedited services</div>
       </div>
       <div class="pr-truck-icon-odd">
@@ -164,6 +168,7 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
           />
         </div>
         <div class="pr-title-truck-icon">Refrigerated</div>
+        <div class="pr-description-truck-size">Size: 53 feet</div>
         <div class="pr-description-truck-icon">
           Prioritized, expedited shipping for urge deliveries
         </div>
@@ -173,6 +178,7 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
           <img src="../assets/iconTrucks/truck-icon.png" alt="heavy haul truck icon" width="180" />
         </div>
         <div class="pr-title-truck-icon">Heavy haul</div>
+        <div class="pr-description-truck-size">Size: 48 and 53 feet</div>
         <div class="pr-description-truck-icon">Loads that weight more than 80,000 lbs, gross weight or require permits to move</div>
       </div>
     </div>
@@ -369,6 +375,15 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
   display: flex;
   text-align: center;
   justify-content: center;
+}
+
+.pr-description-truck-size {
+  max-width: 300px;
+  font-size: 16px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-weight: 600;
 }
 
 .pr-truck-icon-odd,
