@@ -249,7 +249,7 @@ import carrierPacket from '@/assets/files/carrierPacket.pdf'
     top: 5rem;
   }
   .pr-requisites.pr-carriers-requisites {
-    padding-top: 7rem;
+    padding-top: 8rem;
   }
   .pr-carrier-group {
     top: 260px;
@@ -272,7 +272,7 @@ import carrierPacket from '@/assets/files/carrierPacket.pdf'
   }
   .overlap-box {
     width: 20em;
-    height: 79em;
+    height: 75em;
   }
   .px-24 {
     padding-left: 1rem;
@@ -286,8 +286,8 @@ import carrierPacket from '@/assets/files/carrierPacket.pdf'
     width: 37%;
   }
   .pr-carrier-group {
-    top: 290px;
-    right: 2rem;
+    top: 265px;
+    right: 3rem;
   }
   .pr-carriers-container[data-v-fc8709a5] {
     padding: 0.5rem;
