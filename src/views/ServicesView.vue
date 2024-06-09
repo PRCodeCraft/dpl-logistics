@@ -1,6 +1,10 @@
 <template>
   <div>
-    <VHeroBlock imageUrl="./src/assets/hero_services.png" title="Services" optionalClass="pr-hero-services-position"/>
+    <VHeroBlock
+      imageUrl="./src/assets/hero_services.png"
+      title="Services"
+      optionalClass="pr-hero-services-position"
+    />
     <div id="background-services">
       <div class="overlap-box">
         <div class="px-24 py-12">
@@ -23,11 +27,7 @@
           <div class="pl-24 flex justify-center pr-cards">
             <template v-for="(card, index) in displayedCards" :key="index">
               <div class="pr-8 pr-single-card" :class="{ animate: isAnimating }">
-                <img
-                  :src="`${card.image}`"
-                  :alt="card.title"
-                  class="pr-img-services"
-                />
+                <img :src="`${card.image}`" :alt="card.title" class="pr-img-services" />
                 <div class="pr-card-services">
                   <div class="pr-title-card-services">{{ card.title }}</div>
                   <div class="pr-description-card-services">{{ card.description }}</div>
@@ -64,38 +64,44 @@ const cards = ref([
     title: 'Flat Bed',
     description:
       'A flatbed truck boasts an expansive, open loading area devoid of sides or a roof, tailored for transporting oversized and unconventional cargo. This design guarantees secure and efficient delivery, catering to the diverse needs of industries including construction, manufacturing, and logistics',
-    image: 'https://res.cloudinary.com/dajm6vubw/image/upload/v1717876592/DPLlogistics/ur98mvsjjalmkvnarcls.png'
+    image:
+      'https://res.cloudinary.com/dajm6vubw/image/upload/v1717876592/DPLlogistics/ur98mvsjjalmkvnarcls.png'
   },
   {
     title: 'Heavy Haul',
     description:
       'A heavy haul truck is designed to transport oversized or overweight loads. It features specialized equipment and configurations to handle immense cargo weights. Heavy haul trucks play a critical role in industries like construction, mining, and infrastructure development',
-    image: 'https://res.cloudinary.com/dajm6vubw/image/upload/v1717876592/DPLlogistics/jv0loutadcbl65bwbxcz.png'
+    image:
+      'https://res.cloudinary.com/dajm6vubw/image/upload/v1717876592/DPLlogistics/jv0loutadcbl65bwbxcz.png'
   },
   {
     title: 'Dry Van',
     description:
       'A dry van truck features an enclosed, box-like trailer designed to transport standard, non-perishable goods. It offers protection from weather and external elements, ensuring secure and efficient delivery. This type of truck is widely used in industries for the safe transportation',
-    image: 'https://res.cloudinary.com/dajm6vubw/image/upload/v1717876592/DPLlogistics/owzmuq3uwng4rhb3x4jb.jpg'
+    image:
+      'https://res.cloudinary.com/dajm6vubw/image/upload/v1717876592/DPLlogistics/owzmuq3uwng4rhb3x4jb.jpg'
   },
   {
     title: 'Hotshot',
     description:
       'A hotshot truck, renowned for its agility, is designed for urgent deliveries. It typically comprises a heavy-duty pickup with a flatbed trailer. These trucks cater to industries like oil and gas, construction, and agriculture, providing rapid transport for smaller loads',
-    image: 'https://res.cloudinary.com/dajm6vubw/image/upload/v1717876593/DPLlogistics/kleu8o5x8bcfs9rtk77y.png'
+    image:
+      'https://res.cloudinary.com/dajm6vubw/image/upload/v1717876593/DPLlogistics/kleu8o5x8bcfs9rtk77y.png'
   },
   {
     title: 'Refrigerated',
     description:
       'A refrigerated truck, or reefer truck, transports perishable goods at controlled temperatures. Equipped with a refrigeration system, it ensures safe delivery of items. Reefer trucks serve crucial roles in food distribution, pharmaceuticals, and floral transportation',
-    image: 'https://res.cloudinary.com/dajm6vubw/image/upload/v1717876592/DPLlogistics/tl6qm0z77k35orku3nzg.png'
+    image:
+      'https://res.cloudinary.com/dajm6vubw/image/upload/v1717876592/DPLlogistics/tl6qm0z77k35orku3nzg.png'
   },
   {
     title: 'Box Truck',
     description:
       'A box truck has a rigid, enclosed cargo area that resembles a box. It is designed for transporting various goods, offering protection from weather and external elements. This truck type ensures secure, efficient delivery and is widely used in retail, moving, and logistics industries',
-    image: 'https://res.cloudinary.com/dajm6vubw/image/upload/v1717876592/DPLlogistics/xxlbjg6sxc4ykudguznn.jpg'
-  },
+    image:
+      'https://res.cloudinary.com/dajm6vubw/image/upload/v1717876592/DPLlogistics/xxlbjg6sxc4ykudguznn.jpg'
+  }
 ])
 
 const currentIndex = ref(0)
@@ -169,7 +175,7 @@ const displayedCards = computed(() => {
 .pr-services-title-1:after {
   content: '';
   position: absolute;
-  width: 7%;
+  width: 15%;
   left: 6rem;
   padding-top: 40px;
   border-bottom: 2px solid var(--color-light-blue-lighter);
@@ -284,7 +290,9 @@ const displayedCards = computed(() => {
   }
 
   .pr-services-title-1::after {
-    padding-top: 70px;
+    padding-top: 40px;
+    left: 2rem;
+    width: 20%;
   }
 }
 
@@ -303,6 +311,8 @@ const displayedCards = computed(() => {
 
   .pr-services-title-1::after {
     left: 2rem;
+    padding-top: 70px;
+    width: 25%;
   }
 }
 
@@ -327,6 +337,10 @@ const displayedCards = computed(() => {
   .px-24 {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+  .pr-services-title-1::after {
+    left: 1rem;
+    width: 35%;
   }
 }
 </style>
