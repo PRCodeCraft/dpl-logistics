@@ -293,7 +293,7 @@ const displayedCards = computed(() => {
     width: 22em;
   }
   .pr-hero-services-position {
-    background-position-x: -1100px;
+    background-position-x: -950px;
   }
 
   .px-24 {
