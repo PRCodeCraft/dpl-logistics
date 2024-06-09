@@ -490,7 +490,7 @@ input[type='submit'] {
 
 @media (max-width: 420px) {
   .overlap-box {
-    height: 53em;
+    height: 64em;
   }
 
   .pr-text-footer {
