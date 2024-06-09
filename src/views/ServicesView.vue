@@ -298,7 +298,7 @@ const displayedCards = computed(() => {
 
 @media (max-width: 550px) {
   .overlap-box {
-    width: 22em;
+    width: 25em;
   }
   .pr-hero-services-position {
     background-position-x: -950px;
@@ -316,9 +316,14 @@ const displayedCards = computed(() => {
   }
 }
 
+@media (max-width: 450px) {
+  .overlap-box {
+    width: 23em;
+   }}
+
 @media (max-width: 370px) {
   .overlap-box {
-    width: 17em;
+    width: 20em;
     height: 215em;
   }
 
@@ -341,6 +346,12 @@ const displayedCards = computed(() => {
   .pr-services-title-1::after {
     left: 1rem;
     width: 35%;
+  }
+}
+
+@media (max-width: 320px) {
+  .overlap-box {
+    width: 17em;
   }
 }
 </style>
