@@ -8,13 +8,13 @@ const currentYear = ref(new Date().getFullYear())
 
 <template>
   <footer class="pr-background-footer shadow">
-    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+    <div class="my-1 w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
       <span class="text-sm pr-text-dpl-footer sm:text-center"
         >© {{ currentYear }} <a href="#" class="hover:underline">DPL Logistics</a>. All Rights
         Reserved.</span
       >
       <ul
-        class="flex flex-wrap items-center mt-3 text-sm font-medium mt-0 gap-x-8"
+        class="flex flex-wrap items-center text-sm font-medium mt-0 gap-x-8"
       >
         <li class="flex pr-text-footer items-center gap-1">
           <FontAwesomeIcon :icon="faEnvelope" class="pr-icon-footer"/>
