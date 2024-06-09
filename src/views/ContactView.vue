@@ -102,7 +102,7 @@ function showAlertMessage() {
 </script>
 
 <template style="background-color: red;">
-    <VHeroBlock imageUrl="./src/assets/hero_contact.png" title="Contact Us" />
+    <VHeroBlock imageUrl="./src/assets/hero_contact.png" title="Contact Us" optionalClass="pr-contact-hero"/>
     <div class="overlap-box">
         <div class="px-24 py-12">
             <span class="pr-contact-title-1 text-2xl font-bold text-gray-800">Request </span><span
@@ -112,7 +112,7 @@ function showAlertMessage() {
         <form method="POST" class="form" ref="form">
             <div class="input-row">
                 <div>
-                    <label for="name">
+                    <label for="name" class="form-title">
                         <p>*</p>Name
                     </label>
                     <input type="text" id="name" name="name" required>
@@ -124,7 +124,7 @@ function showAlertMessage() {
                     </div>
                 </div>
                 <div>
-                    <label for="email">
+                    <label for="email" class="form-title">
                         <p>*</p>Email
                     </label>
                     <input type="email" id="email" name="email" required>
@@ -138,7 +138,7 @@ function showAlertMessage() {
             </div>
             <div class="input-row">
                 <div>
-                    <label for="phone">
+                    <label for="phone" class="form-title">
                         <p>*</p>Phone
                     </label>
                     <input type="tel" id="phone" name="phone" required>
@@ -150,7 +150,7 @@ function showAlertMessage() {
                     </div>
                 </div>
                 <div>
-                    <label for="subject">
+                    <label for="subject" class="form-title">
                         <p>*</p>Subject
                     </label>
                     <input type="text" id="subject" name="subject" required>
@@ -164,7 +164,7 @@ function showAlertMessage() {
             </div>
             <div class="input-row">
                 <div>
-                    <label for="message">
+                    <label for="message" class="form-title">
                         <p>*</p>Message
                     </label>
                     <textarea id="message" name="message" rows="5" required></textarea>
@@ -196,6 +196,10 @@ function showAlertMessage() {
 <style scoped>
 .pr-main-content {
     background-color: var(--color-light-gray-100);
+}
+
+.pr-contact-hero {
+    background-position-y: -200px ;
 }
 
 .overlap-box {
@@ -286,6 +290,8 @@ input[type="submit"] {
 
 .pr-text-footer {
     color: rgb(82, 81, 81);
+    font-family: 'AkiraExpandedDemo';
+    font-size: 25px;
 }
 
 .pr-contact-title-1 {
@@ -296,7 +302,7 @@ input[type="submit"] {
 .pr-contact-title-1:after {
   content: '';
   position: absolute;
-  width: 7%;
+  width: 15%;
   left: 6rem;
   padding-top: 40px;
   border-bottom: 2px solid var(--color-light-blue-lighter);
@@ -344,22 +350,48 @@ input[type="submit"] {
     display: inline;
 }
 
-@media (max-width: 1260px) {
+.form-title {
+    font-weight: 600;
+}
+
+@media (max-width: 1100px) {
+    .overlap-box {
+        width: 60em;
+        height: 35rem;
+    }
+    .form-title {
+        margin-left: 0em;
+    }
+
+    .px-24 {
+        padding-left: 2rem;
+    }
+
+    .pr-contact-title-1:after {
+        left: 2rem;
+    }
+
+}
+
+@media (max-width: 930px) {
+    .overlap-box {
+        width: 55em;
+    }
+}
+
+@media (max-width: 870px) {
+    .overlap-box {
+        width: 50em;
+        height: 50em;
+    }
+
     .input-row {
         flex-direction: column;
         gap: 0px;
     }
 
-    .overlap-box {
-        height: 60em;
-    }
-
     .form {
         padding: 0px 2em;
-    }
-
-    .form-title {
-        margin-left: 2em;
     }
 
     .form-title-underline {
@@ -368,13 +400,74 @@ input[type="submit"] {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
+    .overlap-box {
+        width: 40em;
+    }
+}
+
+@media (max-width: 650px) {
+    .overlap-box {
+        width: 30em;
+    }
+    .pr-text-footer{
+        font-size: 16px;
+        align-self: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .overlap-box {
+        width: 25em;
+    }
+    .pr-text-footer{
+        font-size: 10px;
+    }
+    .pr-contact-title-1:after {
+        padding-top: 80px;
+        width: 25%;
+    }
+}
+
+@media (max-width: 420px) {
+    .overlap-box {
+        height: 53em;
+    }
     .form-footer {
+        display: flex;
         flex-direction: column;
     }
 
-    .form-title {
-        flex-direction: column;
+    .pr-text-footer {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: -7rem;
+        font-size: 15px;
+    }
+
+    .pr-icon-arrow {
+        display: none;
+    }
+}
+
+@media (max-width: 390px) {
+    .overlap-box {
+        width: 20em;
+    }
+
+    .pr-text-footer {
+        margin-left: -2.5rem;
+    }
+}
+
+@media (max-width: 320px) {
+  .overlap-box {
+    width: 17em;
+  }
+
+  .pr-text-footer {
+        margin-left: -1rem;
+        font-size: 13px;
     }
 }
 </style>
