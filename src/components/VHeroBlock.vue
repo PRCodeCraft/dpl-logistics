@@ -97,7 +97,7 @@ const props = defineProps({
 
 @media (max-width: 1024px) {
   .pr-hero-block-description-font {
-    font-size: 18px;
+    font-size: 23px;
   }
 }
 
@@ -107,17 +107,17 @@ const props = defineProps({
   }
 
   .pr-btn-hero {
-    font-size: 12px;
+    font-size: 17px;
   }
 
   .pr-hero-block-description-font {
-    font-size: 15px;
+    font-size: 20px;
   }
 }
 
 @media (max-width: 640px) {
   .pr-btn-hero {
-    font-size: 10px;
+    font-size: 15px;
   }
 }
 
@@ -127,21 +127,21 @@ const props = defineProps({
   }
 
   .pr-hero-block-description-font {
-    font-size: 13px;
+    font-size: 18px;
   }
 
   .pr-hero-block-font {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
   }
 }
 
 @media (max-width: 382px) {
   .pr-hero-block-description-font {
-    font-size: 11px;
+    font-size: 16px;
   }
 
   .pr-hero-block-font {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
   }
 
   .px-12 {
