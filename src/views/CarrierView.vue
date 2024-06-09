@@ -243,7 +243,7 @@ import carrierPacket from '@/assets/files/carrierPacket.pdf'
     top: 5rem;
   }
   .pr-requisites.pr-carriers-requisites {
-    padding-top: 6rem;
+    padding-top: 7rem;
   }
   .pr-carrier-group {
     top: 260px;
@@ -259,7 +259,7 @@ import carrierPacket from '@/assets/files/carrierPacket.pdf'
   }
   .overlap-box {
     width: 17em;
-    height: 77em;
+    height: 79em;
   }
   .px-24 {
     padding-left: 1rem;
