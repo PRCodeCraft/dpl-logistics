@@ -27,7 +27,7 @@
             </li>
             <li class="pr-carriers-bullet">
               <FontAwesomeIcon :icon="faTruck" class="mr-3"></FontAwesomeIcon>Out of service rating
-              lower than 35 percentage
+              lower than 25 percent
             </li>
             <li class="pr-carriers-bullet">
               <FontAwesomeIcon :icon="faTruck" class="mr-3"></FontAwesomeIcon>Carrier must refrain
@@ -252,7 +252,7 @@ import carrierPacket from '@/assets/files/carrierPacket.pdf'
   }
   .overlap-box {
     width: 17em;
-    height: 75em;
+    height: 77em;
   }
   .px-24 {
     padding-left: 1rem;
