@@ -1,6 +1,6 @@
 <template>
   <div>
-    <VHeroBlock imageUrl="./src/assets/hero_services.png" title="Services" />
+    <VHeroBlock imageUrl="./src/assets/hero_services.png" title="Services" optionalClass="pr-hero-services-position"/>
     <div id="background-services">
       <div class="overlap-box">
         <div class="px-24 py-12">
@@ -67,16 +67,16 @@ const cards = ref([
     image: 'https://res.cloudinary.com/dajm6vubw/image/upload/v1717876592/DPLlogistics/ur98mvsjjalmkvnarcls.png'
   },
   {
+    title: 'Heavy Haul',
+    description:
+      'A heavy haul truck is designed to transport oversized or overweight loads. It features specialized equipment and configurations to handle immense cargo weights. Heavy haul trucks play a critical role in industries like construction, mining, and infrastructure development',
+    image: 'https://res.cloudinary.com/dajm6vubw/image/upload/v1717876592/DPLlogistics/jv0loutadcbl65bwbxcz.png'
+  },
+  {
     title: 'Dry Van',
     description:
       'A dry van truck features an enclosed, box-like trailer designed to transport standard, non-perishable goods. It offers protection from weather and external elements, ensuring secure and efficient delivery. This type of truck is widely used in industries for the safe transportation',
     image: 'https://res.cloudinary.com/dajm6vubw/image/upload/v1717876592/DPLlogistics/owzmuq3uwng4rhb3x4jb.jpg'
-  },
-  {
-    title: 'Box Truck',
-    description:
-      'A box truck has a rigid, enclosed cargo area that resembles a box. It is designed for transporting various goods, offering protection from weather and external elements. This truck type ensures secure, efficient delivery and is widely used in retail, moving, and logistics industries',
-    image: 'https://res.cloudinary.com/dajm6vubw/image/upload/v1717876592/DPLlogistics/xxlbjg6sxc4ykudguznn.jpg'
   },
   {
     title: 'Hotshot',
@@ -91,11 +91,11 @@ const cards = ref([
     image: 'https://res.cloudinary.com/dajm6vubw/image/upload/v1717876592/DPLlogistics/tl6qm0z77k35orku3nzg.png'
   },
   {
-    title: 'Heavy Haul',
+    title: 'Box Truck',
     description:
-      'A heavy haul truck is designed to transport oversized or overweight loads. It features specialized equipment and configurations to handle immense cargo weights. Heavy haul trucks play a critical role in industries like construction, mining, and infrastructure development',
-    image: 'https://res.cloudinary.com/dajm6vubw/image/upload/v1717876592/DPLlogistics/jv0loutadcbl65bwbxcz.png'
-  }
+      'A box truck has a rigid, enclosed cargo area that resembles a box. It is designed for transporting various goods, offering protection from weather and external elements. This truck type ensures secure, efficient delivery and is widely used in retail, moving, and logistics industries',
+    image: 'https://res.cloudinary.com/dajm6vubw/image/upload/v1717876592/DPLlogistics/xxlbjg6sxc4ykudguznn.jpg'
+  },
 ])
 
 const currentIndex = ref(0)
@@ -292,6 +292,9 @@ const displayedCards = computed(() => {
   .overlap-box {
     width: 22em;
   }
+  .pr-hero-services-position {
+    background-position-x: -100px;
+  }
 
   .px-24 {
     padding-left: 2rem;
@@ -307,6 +310,10 @@ const displayedCards = computed(() => {
   .overlap-box {
     width: 17em;
     height: 215em;
+  }
+
+  .pr-hero-services-position {
+    background-position-x: -250px;
   }
 
   .pr-img-services {
