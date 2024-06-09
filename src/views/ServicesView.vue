@@ -293,7 +293,7 @@ const displayedCards = computed(() => {
     width: 22em;
   }
   .pr-hero-services-position {
-    background-position-x: -100px;
+    background-position-x: -1100px;
   }
 
   .px-24 {
@@ -310,10 +310,6 @@ const displayedCards = computed(() => {
   .overlap-box {
     width: 17em;
     height: 215em;
-  }
-
-  .pr-hero-services-position {
-    background-position-x: -250px;
   }
 
   .pr-img-services {
