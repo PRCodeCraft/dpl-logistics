@@ -319,7 +319,8 @@ const displayedCards = computed(() => {
 @media (max-width: 450px) {
   .overlap-box {
     width: 23em;
-   }}
+  }
+}
 
 @media (max-width: 370px) {
   .overlap-box {

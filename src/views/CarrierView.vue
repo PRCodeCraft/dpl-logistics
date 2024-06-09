@@ -1,6 +1,10 @@
 <template>
   <div>
-    <VHeroBlock imageUrl="./src/assets/hero_carrier.png" title="Carriers" optionalClass="pr-carrier-hero" />
+    <VHeroBlock
+      imageUrl="./src/assets/hero_carrier.png"
+      title="Carriers"
+      optionalClass="pr-carrier-hero"
+    />
     <div id="background-carriers">
       <div class="overlap-box">
         <div class="relative">
@@ -40,7 +44,9 @@
             <div class="pr-carriers-title">Do you match our requirements?</div>
             <p class="pr-carriers-text">
               Fill out our file below and send it back to us at
-              <a href="mailto: sales@dpl-logistics.com" class="pr-carriers-email">Sales@dpl-logistics.com</a>
+              <a href="mailto: sales@dpl-logistics.com" class="pr-carriers-email"
+                >Sales@dpl-logistics.com</a
+              >
             </p>
             <div class="flex justify-center pt-8">
               <a
@@ -180,7 +186,7 @@ import carrierPacket from '@/assets/files/carrierPacket.pdf'
   font-size: 15px;
 }
 .py-12 {
-    padding-bottom: 2.1rem;
+  padding-bottom: 2.1rem;
 }
 @media (max-width: 1130px) {
   .pr-background-image-hero {
@@ -235,7 +241,7 @@ import carrierPacket from '@/assets/files/carrierPacket.pdf'
     background-position-y: -200px;
   }
   .overlap-box {
-    width: 22em;
+    width: 25em;
     height: 73em;
   }
   .pr-carriers-title-1::after {
@@ -253,12 +259,19 @@ import carrierPacket from '@/assets/files/carrierPacket.pdf'
     width: 29%;
   }
 }
+
+@media (max-width: 450px) {
+  .overlap-box {
+    width: 23em;
+  }
+}
+
 @media (max-width: 370px) {
   .pr-background-image-hero {
     background-position-x: -380px;
   }
   .overlap-box {
-    width: 17em;
+    width: 20em;
     height: 79em;
   }
   .px-24 {
@@ -278,6 +291,12 @@ import carrierPacket from '@/assets/files/carrierPacket.pdf'
   }
   .pr-carriers-container[data-v-fc8709a5] {
     padding: 0.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .overlap-box {
+    width: 17em;
   }
 }
 </style>
