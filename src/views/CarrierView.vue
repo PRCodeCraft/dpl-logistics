@@ -1,6 +1,6 @@
 <template>
   <div>
-    <VHeroBlock imageUrl="./src/assets/hero_carrier.png" title="Carriers" />
+    <VHeroBlock imageUrl="./src/assets/hero_carrier.png" title="Carriers" optionalClass="pr-carrier-hero" />
     <div id="background-carriers">
       <div class="overlap-box">
         <div class="relative">
@@ -222,10 +222,17 @@ import carrierPacket from '@/assets/files/carrierPacket.pdf'
     top: 160px;
   }
 }
+
+@media (max-width: 700px) {
+  .pr-background-image-hero {
+    background-position-x: -100px;
+    background-position-y: -200px;
+  }
+}
 @media (max-width: 550px) {
   .pr-background-image-hero {
-    background-position-y: -30px;
-    background-position-x: -60px;
+    background-position-x: -300px;
+    background-position-y: -200px;
   }
   .overlap-box {
     width: 22em;
@@ -247,8 +254,8 @@ import carrierPacket from '@/assets/files/carrierPacket.pdf'
   }
 }
 @media (max-width: 370px) {
-    .pr-background-image-hero {
-    background-position-x: -180px;
+  .pr-background-image-hero {
+    background-position-x: -380px;
   }
   .overlap-box {
     width: 17em;
