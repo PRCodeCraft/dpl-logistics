@@ -2,7 +2,7 @@
 import VMountain from '@/components/VMountain.vue'
 import VHeroBlock from '@/components/VHeroBlock.vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import VSimpleCard from '@/components/VSimpleCard.vue'
 </script>
 
@@ -12,7 +12,8 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
     title="DPL LOGISTICS"
     description="We deliver customized freight and trucking solutions to meet your budget and delivery time needs"
     buttonText="Contact Us"
-    buttonRouteName="/Contact" />
+    buttonRouteName="/Contact"
+  />
   <!-- Mision & Vision section  -->
   <div class="pr-background-brand py-36 px-20">
     <div class="pr-background-white">
@@ -179,7 +180,9 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
         </div>
         <div class="pr-title-truck-icon">Heavy haul</div>
         <div class="pr-description-truck-size">Size: 48 and 53 feet</div>
-        <div class="pr-description-truck-icon">Loads that weight more than 80,000 lbs, gross weight or require permits to move</div>
+        <div class="pr-description-truck-icon">
+          Loads that weight more than 80,000 lbs, gross weight or require permits to move
+        </div>
       </div>
     </div>
     <div class="flex justify-center pt-16 pb-24">
@@ -190,12 +193,34 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
       >
     </div>
   </div>
-        <!-- Mountain section  -->
-        <VMountain />
+  <div class="pr-justify-display py-24 pr-background-color-contact">
+    <div class="pr-contact-text">
+      <FontAwesomeIcon :icon="faPhone" class="pr-contact-text" /><a
+        href="tel:+13039154272"
+        class="pr-contact-text"
+        >+1 303 915-4272</a
+      >
+    </div>
+    <div class="pr-contact-text">
+      <FontAwesomeIcon :icon="faEnvelope" class="pr-contact-text" /><a
+        href="mailto: sales@dpl-logistics.com"
+        class="pr-contact-text"
+        >sales@dpl-logistics.com
+      </a>
+    </div>
+  </div>
+  <!-- Mountain section  -->
+  <VMountain />
   <!-- Dakota image section  -->
   <div class="pr-background-image-dakota">
     <div class="pr-img-container-dakota pt-24 pb-24">
-      <img src="../assets/Dakota.png" alt="vp logistic owner" width="620" height="620" class="pr-img-dakota" />
+      <img
+        src="../assets/Dakota.png"
+        alt="vp logistic owner"
+        width="620"
+        height="620"
+        class="pr-img-dakota"
+      />
     </div>
   </div>
 </template>
@@ -397,8 +422,7 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-blend-mode:darken;
-
+  background-blend-mode: darken;
 }
 
 .pr-img-container-dakota {
@@ -417,6 +441,40 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
   font-size: 18px;
   color: var(--color-indigo-100);
   font-weight: 600;
+}
+
+.pr-contact-text {
+  font-family: AkiraExpandedDemo;
+  font-size: 38px;
+  color: #fff;
+  font-weight: 600;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: unset;
+  justify-content: unset;
+  align-self: center;
+}
+
+.pr-background-color-contact {
+  background-color: #111122;
+}
+
+.pr-justify-display {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 1380px) {
+  .pr-justify-display {
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .pr-contact-text {
+    justify-content: center;
+    display: flex;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -489,6 +547,10 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
     font-size: 20px;
   }
 
+  .pr-contact-text {
+    font-size: 32px;
+  }
+
   .pr-freight-direction {
     flex-direction: column;
   }
@@ -499,6 +561,12 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
 
   .pr-text-btn-freight {
     padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .pr-contact-text {
+    font-size: 28px;
   }
 }
 
@@ -520,6 +588,12 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
   .pr-truck-icon-odd {
     display: grid;
     justify-content: center;
+  }
+}
+
+@media (max-width: 667px) {
+  .pr-contact-text {
+    font-size: 22px;
   }
 }
 
@@ -546,6 +620,12 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
   .px-20 {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+}
+
+@media (max-width: 545px) {
+  .pr-contact-text {
+    font-size: 20px;
   }
 }
 
@@ -576,6 +656,20 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
   }
 }
 
+@media (max-width: 504px) {
+  .pr-contact-text {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 446px) {
+  .pr-contact-text {
+    font-size: 14px;
+  }
+}
+
+
+
 @media (max-width: 400px) {
   .pr-image-ms-home {
     width: 200px;
@@ -603,6 +697,10 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
   .pr-title-choose-us:after {
     width: 20%;
   }
+
+  .pr-contact-text {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 350px) {
@@ -625,6 +723,10 @@ import VSimpleCard from '@/components/VSimpleCard.vue'
 
   .pr-content-choose-us {
     max-width: 17rem;
+  }
+
+  .pr-contact-text {
+    font-size: 8px;
   }
 }
 </style>

@@ -15,6 +15,9 @@ import VFooter from './components/VFooter.vue';
         <component :is="Component"></component>
       </RouterView>
     </div>
+    <a href="https://wa.me/+13039154272/?text=Hi, I would like to..." className="pr-app-whatsapp" target="_blank" rel="noopener noreferrer">
+        <img src="https://res.cloudinary.com/dajm6vubw/image/upload/v1693269359/RBespacios/whatsapp-icon_ycnnhn.png" alt="whatsapp icon"/>
+      </a>
     <VFooter/>
   </main>
 </template>
@@ -42,5 +45,25 @@ import VFooter from './components/VFooter.vue';
 
 .pr-main-content {
   background-color: var(--color-light-gray-100);
+}
+
+.pr-app-whatsapp{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+  width: 4em;
+}
+
+@media (max-width: 900px) {
+  .pr-app-whatsapp{
+    width: 3em;
+  }
+}
+
+@media (max-width: 500px) {
+  .pr-app-whatsapp{
+    width: 2em;
+  }
 }
 </style>
